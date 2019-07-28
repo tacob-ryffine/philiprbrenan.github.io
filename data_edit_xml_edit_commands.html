@@ -1,11 +1,13 @@
 
-<h1>Methods in Data::Edit::Xml that can be used to edit Xml in Geany</h1>
+<h1>Methods in Data::Edit::Xml that can be used to edit Dita in Geany</h1>
 
-<p><a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> is a Perl extension moduel that can assist you to edit L[Xml].
+<p><a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> is a Perl extension module that can help you edit <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a>.
 
-<p>Normally such edits are performed under the control of a Perl program.
-However, you can use many of these methods directly from the L<Geany> editor
-when it has been configured for L[Xml} editing.
+<p>Normally such edits are performed in bulk under the control of a Perl
+program. However, you can use many of these methods one at a time directly from
+the L<Geany> editor when it has been configured for <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> editing. The methods executed are
+recorded in log visible in another <a format="html" href="https://www.geany.org">Geany</a> tab so that they can be edited directly into
+a prgram that us being develiped to use <a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a>.
 
 <p>The table below lists the methods that can be used in <a format="html" href="https://www.geany.org">Geany</a>.  Simply type
 the method name and any parameters up against a closing <b>&gt;</b> or
@@ -18,7 +20,7 @@ the method name and any parameters up against a closing <b>&gt;</b> or
 </ol>
 </pre>
 
-<p>and press <b>shift_Enter</b> to get:
+<p>and press <b>shift+Enter</b> to get:
 
 <pre>
 <ol>
@@ -571,6 +573,8 @@ the method name and any parameters up against a closing <b>&gt;</b> or
 <tr><td>ww<td>wrapWithAll<td>Wrap this B<$node> wrapped with the specified B<@tags> and return the last wrapping node.
 <tr><td><td>wrapWithN<td>Wrap this B<$node> with the first B<$N> elements of B<@context>. If B<@context> contains more then B<$N> entries, the remainder are checked as the context of B<$node>. Returns the upper most wrapping node or B<undef> if the specified B<$node> does not match these conditions.
 <tr><td><td>writeCompressedFile<td>Write the parse tree starting at B<$node> as compressed xml to the specified B<$file>. Use L<readCompressedFile|/readCompressedFile>  to read the B<$file>.
+<tr><td><td>writeContentToGitHub<td>Upload the contents of a string to a file on github
+<tr><td><td>writeFileToGitHub<td>Upload the contents of the specified local file to a file on github
 <tr><td><td>xmlHeader<td>Add the standard xml header to a string
 <tr><td><td>xmlToJson<td>Return a Json string representing valid xml contained in a file or string, optionally double escaping escape characters.
 <tr><td><td>zipDown<td>Push a node down as many levels as possible by making it a child of a node formed by merging the preceding and following siblings if they have the same tag.
