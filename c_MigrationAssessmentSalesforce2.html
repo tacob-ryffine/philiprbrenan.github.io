@@ -1,0 +1,263 @@
+<html id="concept_ejx_bxz_dhb">
+  <head>
+    <title>Ryffine Migration Readiness Assessment</title>
+  </head>
+  <body>
+    <p>Are you ready for migration?  Please fill out the form below and then
+    right click anywhere, select 
+      <uicontrol>save page as</uicontrol>
+ to save
+    the completed form to a file. Please email that file to:
+      <a href="mailto:bill.gearhart@ryffine.com">Bill</a>
+    </p>
+    <p>Source file format and size:
+      <ol>
+        <li>DITA
+          <p id="nDitaTopics">number of topics:
+          <input name="nDitaTopics" size="32" type="text"/>
+</p>
+          <p id="nDitaPages">number of pages:
+          <input name="nDitaPages" size="32" type="text"/>
+</p>
+        </li>
+        <li>XML
+          <p id="nXmlTopics">number of topics:
+          <input name="nXmlTopics" size="32" type="text"/>
+</p>
+          <p id="nXmlPages">number of pages:
+          <input name="nXmlPages" size="32" type="text"/>
+</p>
+        </li>
+        <li>html
+          <p id="nHtmlTopics">number of topics:
+          <input name="nHtmlTopics" size="32" type="text"/>
+</p>
+          <p id="nHtmlPages">number of pages:
+          <input name="nHtmlPages" size="32" type="text"/>
+</p>
+        </li>
+        <li>mif
+          <p id="nMifPages">number of pages:
+          <input name="nMifPages" size="32" type="text"/>
+</p>
+        </li>
+        <li>rtf
+          <p id="nRtfPages">number of pages:
+          <input name="nRtfPages" size="32" type="text"/>
+</p>
+        </li>
+        <li>PDF
+          <p id="nPDFPages">number of pages:
+          <input name="nPDFPages" size="32" type="text"/>
+</p>
+        </li>
+        <li>MS Word
+          <p id="nWordPages">number of pages:
+          <input name="nWordPages" size="32" type="text"/>
+</p>
+        </li>
+        <li>MS Excel
+          <p id="nExcellRows">number of rows:
+          <input name="nExcellRows" size="32" type="text"/>
+</p>
+        </li>
+        <li id="nCsvRows">csv
+          <p>number of rows:
+          </p>
+        </li>
+        <li>OTHER
+          <p id="otherType">Specify:
+          <input name="otherType" size="32" type="text"/>
+</p>
+          <p id="nOtherType">Number of pages:
+          <input name="nOtherType" size="32" type="text"/>
+</p>
+        </li>
+      </ol>
+    </p>
+    <p>Files can be delivered in a readable format (text-based if at all possible) (also list
+            the source format to which export can be made to one of these formats):
+      <ul id="deliveryformat">
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+xml</li>
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+html</li>
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+mif</li>
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+rtf</li>
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+Word</li>
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+PDF</li>
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+Excel</li>
+        <li><input name="deliveryformat_xml_html_mif_rtf_Word_PDF_Excel_csv" type="radio"/>
+csv</li>
+      </ul>
+    </p>
+    <p>Break topics at this heading level:
+      <ul id="headerBreakLevel">
+        <li><input name="headerBreakLevel_h1_h2_h3_h4_h5" type="radio"/>
+h1</li>
+        <li><input name="headerBreakLevel_h1_h2_h3_h4_h5" type="radio"/>
+h2</li>
+        <li><input name="headerBreakLevel_h1_h2_h3_h4_h5" type="radio"/>
+h3</li>
+        <li><input name="headerBreakLevel_h1_h2_h3_h4_h5" type="radio"/>
+h4</li>
+        <li><input name="headerBreakLevel_h1_h2_h3_h4_h5" type="radio"/>
+h5</li>
+      </ul>
+    </p>
+    <p>Are images embedded or included by reference?
+      <ul id="ImageInclusion">
+        <li><input name="ImageInclusion_Embedded_Reference" type="radio"/>
+Embedded</li>
+        <li><input name="ImageInclusion_Embedded_Reference" type="radio"/>
+Reference</li>
+      </ul>
+    </p>
+    <p>Image source file format
+      <ol id="ImageFormat">
+        <li><input name="ImageFormat_PNG_GIF_BMP_SVG_PDF_Other_specify" type="checkbox"/>
+PNG</li>
+        <li><input name="ImageFormat_PNG_GIF_BMP_SVG_PDF_Other_specify" type="checkbox"/>
+GIF</li>
+        <li><input name="ImageFormat_PNG_GIF_BMP_SVG_PDF_Other_specify" type="checkbox"/>
+BMP</li>
+        <li><input name="ImageFormat_PNG_GIF_BMP_SVG_PDF_Other_specify" type="checkbox"/>
+SVG</li>
+        <li><input name="ImageFormat_PNG_GIF_BMP_SVG_PDF_Other_specify" type="checkbox"/>
+PDF</li>
+        <li><input name="ImageFormat_PNG_GIF_BMP_SVG_PDF_Other_specify" type="checkbox"/>
+Other (specify):</li>
+      </ol>
+    </p>
+    <p>Convert images to svg?
+      <ul id="convertImagesToSvg">
+        <li><input name="convertImagesToSvg_Yes_No" type="radio"/>
+Yes</li>
+        <li><input name="convertImagesToSvg_Yes_No" type="radio"/>
+No</li>
+      </ul>
+    </p>
+    <p>Files are complete with no file references missing
+      <ul id="completeCorpusNoMissingRefs">
+        <li><input name="completeCorpusNoMissingRefs_Yes_No_Unknown" type="radio"/>
+Yes</li>
+        <li><input name="completeCorpusNoMissingRefs_Yes_No_Unknown" type="radio"/>
+No</li>
+        <li><input name="completeCorpusNoMissingRefs_Yes_No_Unknown" type="radio"/>
+Unknown</li>
+      </ul>
+    </p>
+    <p>Entire set of files to be migrated are provided up front.
+      <ul id="completeCorpusNoMissingFiles">
+        <li><input name="completeCorpusNoMissingFiles_Yes_No_Unknown" type="radio"/>
+Yes</li>
+        <li><input name="completeCorpusNoMissingFiles_Yes_No_Unknown" type="radio"/>
+No</li>
+        <li><input name="completeCorpusNoMissingFiles_Yes_No_Unknown" type="radio"/>
+Unknown</li>
+      </ul>
+    </p>
+    <p id="poc">If a POC, files are representative of complete set, and customer provides at least the square root of total number for POC.<input name="poc" size="32" type="text"/>
+</p>
+    <p>Files can be placed directly into s3 or git in an unzipped format
+      <ul id="receiveFilesAt">
+        <li><input name="receiveFilesAt_Yes_No_Unknown" type="radio"/>
+Yes</li>
+        <li><input name="receiveFilesAt_Yes_No_Unknown" type="radio"/>
+No</li>
+        <li><input name="receiveFilesAt_Yes_No_Unknown" type="radio"/>
+Unknown</li>
+      </ul>
+    </p>
+    <p>Which DTD set do you use in the source? Are they public or private?</p>
+    <ol id="dtdSet">
+      <li><input name="dtdSet_DITA_1_2_DITA_1_3_docbook_SGML_XML_custom_Unknown" type="checkbox"/>
+DITA 1.2</li>
+      <li><input name="dtdSet_DITA_1_2_DITA_1_3_docbook_SGML_XML_custom_Unknown" type="checkbox"/>
+DITA 1.3</li>
+      <li><input name="dtdSet_DITA_1_2_DITA_1_3_docbook_SGML_XML_custom_Unknown" type="checkbox"/>
+docbook</li>
+      <li><input name="dtdSet_DITA_1_2_DITA_1_3_docbook_SGML_XML_custom_Unknown" type="checkbox"/>
+SGML</li>
+      <li><input name="dtdSet_DITA_1_2_DITA_1_3_docbook_SGML_XML_custom_Unknown" type="checkbox"/>
+XML custom</li>
+      <li><input name="dtdSet_DITA_1_2_DITA_1_3_docbook_SGML_XML_custom_Unknown" type="checkbox"/>
+Unknown</li>
+    </ol>
+    <p>Were files exported from a CMS?
+      <ul id="exportedFromCms">
+        <li><input name="exportedFromCms_Yes_No_Unknown" type="radio"/>
+Yes</li>
+        <li><input name="exportedFromCms_Yes_No_Unknown" type="radio"/>
+No</li>
+        <li><input name="exportedFromCms_Yes_No_Unknown" type="radio"/>
+Unknown</li>
+      </ul>
+    </p>
+    <p>If yes, are they complete?
+      <ul id="exportedFromCmsCompletely">
+        <li><input name="exportedFromCmsCompletely_Yes_No_Unknown" type="radio"/>
+Yes</li>
+        <li><input name="exportedFromCmsCompletely_Yes_No_Unknown" type="radio"/>
+No</li>
+        <li><input name="exportedFromCmsCompletely_Yes_No_Unknown" type="radio"/>
+Unknown</li>
+      </ul>
+    </p>
+    <p>Do you want images to be normalized?
+      <ul>
+        <li>Yes</li>
+        <li>No</li>
+      </ul>
+    </p>
+    <p>Do you want topics to be normalized?
+      <ul>
+        <li>Yes</li>
+        <li>No</li>
+      </ul>
+    </p>
+    <p>Specify target file naming standard:
+      <ul id="fileNamingStandard">
+        <li><input name="fileNamingStandard_GBStandard_Unknown" type="radio"/>
+GBStandard</li>
+        <li><input name="fileNamingStandard_GBStandard_Unknown" type="radio"/>
+Unknown</li>
+      </ul>
+    </p>
+    <p>Will you provide a resource to review interim results and help to refine the conversion?
+      <ul id="laura">
+        <li><input name="laura_Yes_No" type="radio"/>
+Yes</li>
+        <li><input name="laura_Yes_No" type="radio"/>
+No</li>
+      </ul>
+    </p>
+    <p>Are there any angle brackets, blanks, ampersands, quotes, dashes, hashes, unicode characters or  zero width spaces in your file names?
+      <ul id="weirdCharactersPresentInfileNames">
+        <li><input name="weirdCharactersPresentInfileNames_Yes_No_Unknown" type="radio"/>
+Yes</li>
+        <li><input name="weirdCharactersPresentInfileNames_Yes_No_Unknown" type="radio"/>
+No</li>
+        <li><input name="weirdCharactersPresentInfileNames_Yes_No_Unknown" type="radio"/>
+Unknown</li>
+      </ul>
+    </p>
+    <p id="fileNameLengthLongest">What is the length of your longest file name?<input name="fileNameLengthLongest" size="32" type="text"/>
+</p>
+    <p id="fileNameLengthAverage">What is the approximate length of your average file name?<input name="fileNameLengthAverage" size="32" type="text"/>
+</p>
+    <p id="fileContentLongest">What is the length of your longest file content?<input name="fileContentLongest" size="32" type="text"/>
+</p>
+    <p id="fileContentAverage">What is the approximate length of your average file content?<input name="fileContentAverage" size="32" type="text"/>
+</p>
+    <p id="outputStructure">Do you want a single output folder or structured output folders?<input name="outputStructure" size="32" type="text"/>
+</p>
+    <p id="stepsAndSubstepsOrJustSteps">Break nested numbered lists into steps and substeps or just steps?<input name="stepsAndSubstepsOrJustSteps" size="32" type="text"/>
+</p>
+  </body>
+</html>
