@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd" []>
+<concept id="concept_ejx_bxz_dhb">
+  <title>Ryffine Migration Readiness Assessment</title>
+  <conbody>
+    <p>Are you ready for migration?  Please fill out the form below and then
+    right click anywhere, select <uicontrol>save page as</uicontrol> to save
+    the completed form to a file. Please email that file to:
+       <xref href="mailto:bill.gearhart@ryffine.com">Bill</xref></p>
+    <p>Source file format and size:
+      <ol>
+        <li>DITA
+          <p id="nDitaTopics">number of topics:
+          </p>
+          <p id="nDitaPages">number of pages:
+          </p>
+        </li>
+        <li>XML
+          <p id="nXmlTopics">number of topics:
+          </p>
+          <p id="nXmlPages">number of pages:
+          </p>
+        </li>
+        <li>html
+          <p id="nHtmlTopics">number of topics:
+          </p>
+          <p id="nHtmlPages">number of pages:
+          </p>
+        </li>
+        <li>mif
+          <p id="nMifPages">number of pages:
+          </p>
+        </li>
+        <li>rtf
+          <p id="nRtfPages">number of pages:
+          </p>
+        </li>
+        <li>PDF
+          <p id="nPDFPages">number of pages:
+          </p>
+        </li>
+        <li>MS Word
+          <p id="nWordPages">number of pages:
+          </p>
+        </li>
+        <li>MS Excel
+          <p id="nExcellRows">number of rows:
+          </p>
+        </li>
+        <li id="nCsvRows">csv
+          <p>number of rows:
+          </p>
+        </li>
+        <li>OTHER
+          <p id="otherType">Specify:
+          </p>
+          <p id="nOtherType">Number of pages:
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>Files can be delivered in a readable format (text-based if at all possible) (also list
+            the source format to which export can be made to one of these formats):
+      <ul id="deliveryformat">
+        <li>xml</li>
+        <li>html</li>
+        <li>mif</li>
+        <li>rtf</li>
+        <li>Word</li>
+        <li>PDF</li>
+        <li>Excel</li>
+        <li>csv</li>
+      </ul>
+    </p>
+    <p>Break topics at this heading level:
+      <ul id="headerBreakLevel">
+        <li>h1</li>
+        <li>h2</li>
+        <li>h3</li>
+        <li>h4</li>
+        <li>h5</li>
+      </ul>
+    </p>
+    <p>Are images embedded or included by reference?
+      <ul id="ImageInclusion">
+        <li>Embedded</li>
+        <li>Reference</li>
+      </ul>
+    </p>
+    <p>Image source file format
+      <ol id="ImageFormat">
+        <li>PNG</li>
+        <li>GIF</li>
+        <li>BMP</li>
+        <li>SVG</li>
+        <li>PDF</li>
+        <li>Other (specify):</li>
+      </ol>
+    </p>
+    <p>Convert images to svg?
+      <ul id="convertImagesToSvg">
+        <li>Yes</li>
+        <li>No</li>
+      </ul>
+    </p>
+    <p>Files are complete with no file references missing
+      <ul id="completeCorpusNoMissingRefs">
+        <li>Yes</li>
+        <li>No</li>
+        <li>Unknown</li>
+      </ul>
+    </p>
+    <p>Entire set of files to be migrated are provided up front.
+      <ul id="completeCorpusNoMissingFiles">
+        <li>Yes</li>
+        <li>No</li>
+        <li>Unknown</li>
+      </ul>
+    </p>
+    <p id="poc">If a POC, files are representative of complete set, and customer provides at least the square root of total number for POC.</p>
+    <p>Files can be placed directly into s3 or git in an unzipped format
+      <ul id="receiveFilesAt">
+        <li>Yes</li>
+        <li>No</li>
+        <li>Unknown</li>
+      </ul>
+    </p>
+    <p>Which DTD set do you use in the source? Are they public or private?</p>
+    <ol id="dtdSet">
+      <li>DITA 1.2</li>
+      <li>DITA 1.3</li>
+      <li>docbook</li>
+      <li>SGML</li>
+      <li>XML custom</li>
+      <li>Unknown</li>
+    </ol>
+    <p>Were files exported from a CMS?
+      <ul id="exportedFromCms">
+        <li>Yes</li>
+        <li>No</li>
+        <li>Unknown</li>
+      </ul>
+    </p>
+    <p>If yes, are they complete?
+      <ul  id="exportedFromCmsCompletely">
+        <li>Yes</li>
+        <li>No</li>
+        <li>Unknown</li>
+      </ul>
+    </p>
+    <p>Do you want images to be normalized?
+      <ul>
+        <li>Yes</li>
+        <li>No</li>
+      </ul>
+    </p>
+    <p>Do you want topics to be normalized?
+      <ul>
+        <li>Yes</li>
+        <li>No</li>
+      </ul>
+    </p>
+    <p>Specify target file naming standard:
+      <ul id="fileNamingStandard">
+        <li>GBStandard</li>
+        <li>Unknown</li>
+      </ul>
+    </p>
+    <p>Will you provide a resource to review interim results and help to refine the conversion?
+      <ul id="laura">
+        <li>Yes</li>
+        <li>No</li>
+      </ul>
+    </p>
+    <p>Are there any angle brackets, blanks, ampersands, quotes, dashes, hashes, unicode characters or  zero width spaces in your file names?
+      <ul id="weirdCharactersPresentInfileNames">
+        <li>Yes</li>
+        <li>No</li>
+        <li>Unknown</li>
+      </ul>
+    </p>
+    <p id="fileNameLengthLongest">What is the length of your longest file name?</p>
+    <p id="fileNameLengthAverage">What is the approximate length of your average file name?</p>
+    <p id="fileContentLongest">What is the length of your longest file content?</p>
+    <p id="fileContentAverage">What is the approximate length of your average file content?</p>
+    <p id="outputStructure">Do you want a single output folder or structured output folders?</p>
+    <p id="stepsAndSubstepsOrJustSteps">Break nested numbered lists into steps and substeps or just steps?</p>
+  </conbody>
+</concept>
