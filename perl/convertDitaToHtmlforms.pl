@@ -1,7 +1,7 @@
 #!/usr/bin/perl -I/home/phil/perl/cpan/GitHubCrud/lib/
 #-------------------------------------------------------------------------------
 # Convert Dita to Html forms
-# Philip R Brenan at gmail dot com, Appa Apps Ltd Inc., 2019
+# Philip R Brenan at gmail dot com, www.ryffine.com, 2019
 #-------------------------------------------------------------------------------
 use warnings FATAL => qw(all);
 use strict;
