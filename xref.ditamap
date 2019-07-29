@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd" []>
+<bookmap>
+  <booktitle><mainbooktitle>Self Service Xref and Publish
+  </mainbooktitle>
+  </booktitle>
+  <chapter href="xref.xml"/>
+</bookmap>
+
