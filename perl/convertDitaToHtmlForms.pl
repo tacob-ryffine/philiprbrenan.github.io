@@ -1,6 +1,6 @@
 #!/usr/bin/perl -I/home/phil/perl/cpan/GitHubCrud/lib/
 #-------------------------------------------------------------------------------
-# Convert Dita to Html forms
+# Convert Dita to Html forms and load to GitHub
 # Philip R Brenan at gmail dot com, www.ryffine.com, 2019
 #-------------------------------------------------------------------------------
 use warnings FATAL => qw(all);
