@@ -3,8 +3,8 @@
 <concept id="mail">
   <title>Ryffine Migration Readiness Assessment</title>
   <conbody>
-    <p>Are you ready for migration?  Please fill out the form below and then
-    follow the instructions in the next section.</p>
+    <p>Are you ready for migration?  Please fill out the form below then
+    click the linkk at the end of this section.</p>
     <p>Source file format and size:
       <ol>
         <li>DITA
@@ -185,10 +185,8 @@
     <p id="outputStructure">Do you want a single output folder or structured output folders?</p>
     <p id="stepsAndSubstepsOrJustSteps">Break nested numbered lists into steps and substeps or just steps?</p>
 
-    <section><title>Send form to Ryffine</title>
-      <p>To send this form to Ryffine, please <xref id="mailto" outputclass="bill.gearhart@ryffine.com"><uicontrol>click here</uicontrol></xref>.
-      </p>
-    </section>
+    <p>To send this form to Ryffine, please <xref id="mailto" outputclass="bill.gearhart@ryffine.com"><uicontrol>click here</uicontrol></xref>.
+    </p>
 
     <section><title>Self Service Xref</title>
       <p>You can obtain more information about the global structure of your
