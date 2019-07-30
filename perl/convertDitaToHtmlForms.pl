@@ -77,7 +77,7 @@ END
 
 lll "Convert Dita to Html Forms";
 
-my @inputFiles = searchDirectoryTreesForMatchingFiles(in);                      # Input files
+my @inputFiles = searchDirectoryTreesForMatchingFiles(in, qw(xml dita));        # Input files
 
 for my $input(@inputFiles)                                                      # Convert each input file
  {convertFile($input);
