@@ -23,7 +23,9 @@ sub ghUser           {q(philiprbrenan)}                                         
 sub convertFile($)                                                              # Convert a file
  {my ($inputFile) = @_;                                                         # File
 
-  my $x = Data::Edit::Xml::new($inputFile);                                     # Parse the source file
+  my $source = expandWellKnownUrlsInDitaFormat readFile($inputFile);            # Read the source
+
+  my $x = Data::Edit::Xml::new($source);                                        # Parse the source
 
   $x->by(sub                                                                    # Convert the source Dita to Html
    {my ($o) = @_;
