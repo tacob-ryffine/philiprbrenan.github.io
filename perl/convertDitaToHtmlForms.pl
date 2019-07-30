@@ -31,8 +31,11 @@ sub convertFile($)                                                              
    {my ($o) = @_;
     $o->change_html_concept;
     $o->wrapWith_head if $o->at_title_concept;
+    $o->change_div_section;
+    $o->change_h2_title_section;
     $o->change_body_conbody;
     $o->change_a_xref;
+    $o->change_b_uicontrol;
 
     if ($o->at_p)                                                               # p
      {if (my $id = $o->id)
