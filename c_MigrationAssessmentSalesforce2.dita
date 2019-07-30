@@ -192,8 +192,19 @@
         a <xref format="html" scope="external" href="https://philiprbrenan.github.io/selfServiceXref.pdf">Self Service Xref</xref>.
       </p>
     </section>
-    <section><title>About this document</title>
-      <p>This document was prepared from 100% pure L[Dita], you can see its source
+    <section><title>Oxygen Workshop</title>
+      <p>If you wish to practice editing L[Dita] documents, try the <xref format="html" scope="external"
+       href="https://github.com/philiprbrenan/oxygenWorkShop">Oxygen Workshop</xref>.
+      </p>
+    </section>
+    <section><title>Consulting help</title>
+      <p>If you need more detailed help migrating to and using  L[Dita] effectively then: <xref format="html" scope="external"
+       href="https://www.ryffine.com/contact-us">contact us</xref>!
+      </p>
+    </section>
+    <section><title>This document prepared from 100% pure Dita</title>
+      <p>This document was prepared from 100% pure L[Dita], you can see its
+      source
        <xref format="html" scope="external" href="https://github.com/philiprbrenan/philiprbrenan.github.io/blob/master/c_MigrationAssessmentSalesforce2.dita">here</xref>.
       </p>
     </section>
