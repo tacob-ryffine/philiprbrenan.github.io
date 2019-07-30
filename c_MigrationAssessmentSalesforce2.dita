@@ -186,5 +186,9 @@
     <p id="fileContentAverage">What is the approximate length of your average file content?</p>
     <p id="outputStructure">Do you want a single output folder or structured output folders?</p>
     <p id="stepsAndSubstepsOrJustSteps">Break nested numbered lists into steps and substeps or just steps?</p>
+    <section><title>About this document</title></section>
+      <p>This document was prepared from 100% pure L[Dita], you can see its source at:
+       <xref format="html" scope="external" href="http://philiprbrenan.github.io/c_MigrationAssessmentSalesforce2.dita_"/>
+      </p>
   </conbody>
 </concept>
