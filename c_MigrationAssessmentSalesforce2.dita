@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd" []>
-<concept id="concept_ejx_bxz_dhb">
+<concept id="mail">
   <title>Ryffine Migration Readiness Assessment</title>
   <conbody>
     <p>Are you ready for migration?  Please fill out the form below and then
-    right click anywhere, select <uicontrol>save page as</uicontrol> to save
-    the completed form to a file. Please email that file to:
-       <xref href="mailto:bill.gearhart@ryffine.com">Bill</xref></p>
+    follow the instructions in the next section.</p>
     <p>Source file format and size:
       <ol>
         <li>DITA
@@ -186,6 +184,12 @@
     <p id="fileContentAverage">What is the approximate length of your average file content?</p>
     <p id="outputStructure">Do you want a single output folder or structured output folders?</p>
     <p id="stepsAndSubstepsOrJustSteps">Break nested numbered lists into steps and substeps or just steps?</p>
+
+    <section><title>Send form to Ryffine</title>
+      <p>To send this form to Ryffine, please <xref id="mailto" outputclass="bill.gearhart@ryffine.com"><uicontrol>click here</uicontrol></xref>.
+      </p>
+    </section>
+
     <section><title>Self Service Xref</title>
       <p>You can obtain more information about the global structure of your
       documents by following these instructions to perform
