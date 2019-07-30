@@ -15,9 +15,9 @@ use utf8;
 use feature qw(say current_sub);
 sub upload           {&develop ? 0 : 1}                                         # Upload to S3 Bucket if true and the conversion is at 100%, 2 - upload to S3 Bucket regardless, 0 - no upload to S3 Bucket.
 sub home             {q(/home/phil/r/z/ditaToHtmlForms/)}                       # Home folder containing all the other folders.
-sub in               {fpd(&home,    qw(in))}                                    # Input documents folder.
-sub out              {fpd(&home,    qw(out))}                                   # Converted documents output folder.
-sub perl             {fpd(&home,    qw(perl))}                                  # Perl folder.
+sub in               {fpd(&home, qw(in))}                                       # Input documents folder.
+sub out              {fpd(&home, qw(out))}                                      # Converted documents output folder.
+sub perl             {fpd(&home, qw(perl))}                                     # Perl folder.
 sub ghUser           {q(philiprbrenan)}                                         # GitHub repo owner
 sub ghRepo           {ghUser.q(.github.io)}                                     # GitHub repo name
 
