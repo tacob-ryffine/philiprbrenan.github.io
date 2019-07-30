@@ -41,7 +41,7 @@ sub convertFile($)                                                              
     if ($o->at_p)                                                               # p
      {if (my $id = $o->id)
        {$o->putLastAsText(<<END);
-<input name="$id" size="32" type="text"/>
+<input name="$id" size="32" type="text" onchange="updateFields('$id', this.value)"/>
 END
        }
      }
@@ -52,7 +52,7 @@ END
          {my $name = $id.q(_).nameFromString($o->stringContent);
           my $type = -t $o eq q(ol) ? q(checkbox) : q(radio);
           $l->putFirstAsText(<<END);
-<input name="$name" type="$type"/>
+<input name="$name" type="$type" onchange="updateFields('$name', this.value)"/>
 END
          }
        }
@@ -61,10 +61,25 @@ END
 
   my $o = swapFilePrefix($inputFile, in, out);                                  # Output file
      $o = setFileExtension($o, q(html));
+
+  my $title = $x->go_head_title->stringContent;                                 # Get title of form
+  $x->go_body->putLastAsText(<<END);                                            # Js to collect values
+<script>
+var fieldValues = {};
+function updateFields(field, value)
+ {fieldValues[field] = value;
+  const m = document.getElementById("mailto");
+  const e = m.getAttribute("outputclass");
+  const s = encodeURIComponent("Ryffine Migration Readiness Assessment");
+  const b = encodeURIComponent(JSON.stringify(fieldValues));
+  m.href  = "mailto:"+e+"?subject="+s+"&body="+b
+ }
+</script>
+END
   my $html = -p $x;
   owf($o, $html);                                                               # Write html
 
-  if (1)
+  if (1)                                                                        # Send files to GitHub
    {my $u = ghUser;
     my @files = ([fne($o), $html],                                              # Files to create on GitHub
                  [fne($inputFile), readBinaryFile($inputFile)]);
@@ -84,8 +99,12 @@ for my $input(@inputFiles)                                                      
  {convertFile($input);
  }
 
-GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghRepo,                  # Back up perl
-  fpf(qw(perl), fne($0)), $0);
+sub sendGH($$)                                                                  # Write a file to GitHub
+ {my ($s, $t) = @_;
+  GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghRepo, $s, $t);       # Back up perl
+ }
 
-GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghRepo,                  # Self service xref
-  q(selfServiceXref.pdf), q(/home/phil/r/www/doc/out/xref.pdf));
+if (1)
+ {sendGH(fpf(qw(perl), fne($0)), $0);                                           # Perl
+  sendGH(q(selfServiceXref.pdf), q(/home/phil/r/www/doc/out/xref.pdf));         # Self service xref
+ }
