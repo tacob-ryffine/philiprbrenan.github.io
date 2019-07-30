@@ -186,9 +186,16 @@
     <p id="fileContentAverage">What is the approximate length of your average file content?</p>
     <p id="outputStructure">Do you want a single output folder or structured output folders?</p>
     <p id="stepsAndSubstepsOrJustSteps">Break nested numbered lists into steps and substeps or just steps?</p>
+    <section><title>Self Service Xref</title>
+      <p>You can obtain more information about the global structure of ypur documents by following these instructions to perform
+        a  <xref format="html" scope="external"
+        href="https://philiprbrenan.github.io/selfServiceXref.pdf">Self Service
+        Xref</xref>.
+      </p>
+    </section>
     <section><title>About this document</title>
       <p>This document was prepared from 100% pure L[Dita], you can see its source
-       <xref format="html" scope="external" href="https://github.com/philiprbrenan/philiprbrenan.github.io/blob/master/c_MigrationAssessmentSalesforce2.dita">here</xref>
+       <xref format="html" scope="external" href="https://github.com/philiprbrenan/philiprbrenan.github.io/blob/master/c_MigrationAssessmentSalesforce2.dita">here</xref>.
       </p>
     </section>
   </conbody>
