@@ -85,3 +85,6 @@ for my $input(@inputFiles)                                                      
 
 GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghUser.qq(.github.io),   # Back up perl
   fpf(qw(perl), fne($0)), $0);
+
+GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghUser.qq(.github.io),   # Self service xref
+  q(selfServiceXref.pdf), q(/home/phil/r/www/doc/out/xref.pdf));
