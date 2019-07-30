@@ -189,9 +189,7 @@
     <section><title>Self Service Xref</title>
       <p>You can obtain more information about the global structure of your
       documents by following these instructions to perform
-        a  <xref format="html" scope="external"
-        href="https://github.com/philiprbrenan/philiprbrenan.github.io/blob/master/selfServiceXref.pdf">Self Service
-        Xref</xref>.
+        a <xref format="html" scope="external" href="https://philiprbrenan.github.io/selfServiceXref.pdf">Self Service Xref</xref>.
       </p>
     </section>
     <section><title>About this document</title>
