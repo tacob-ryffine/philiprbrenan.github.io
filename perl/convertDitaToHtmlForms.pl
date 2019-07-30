@@ -19,6 +19,7 @@ sub in               {fpd(&home,    qw(in))}                                    
 sub out              {fpd(&home,    qw(out))}                                   # Converted documents output folder.
 sub perl             {fpd(&home,    qw(perl))}                                  # Perl folder.
 sub ghUser           {q(philiprbrenan)}                                         # GitHub repo owner
+sub ghRepo           {ghUser.q(.github.io)}                                     # GitHub repo name
 
 sub convertFile($)                                                              # Convert a file
  {my ($inputFile) = @_;                                                         # File
@@ -83,8 +84,8 @@ for my $input(@inputFiles)                                                      
  {convertFile($input);
  }
 
-GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghUser.qq(.github.io),   # Back up perl
+GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghRepo,                  # Back up perl
   fpf(qw(perl), fne($0)), $0);
 
-GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghUser.qq(.github.io),   # Self service xref
+GitHub::Crud::writeFileFromFileUsingSavedToken(ghUser, ghRepo,                  # Self service xref
   q(selfServiceXref.pdf), q(/home/phil/r/www/doc/out/xref.pdf));
