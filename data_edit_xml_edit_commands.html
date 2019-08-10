@@ -925,7 +925,20 @@ L<first|/first>.
 </table>
 <td>Write an error message in Oxygen format
 
-<tr><td>77<td>go<td><b></b><td>
+<tr><td>77<td>getNodeAs<td><b>get</b><td>
+<table cellpadding="20" border="0" width="100%">
+<tr><th>Parameter<th>Description
+
+<tr><td>$name<td>Name of saved node
+
+<tr><td>@context<td>Optional context
+
+</table>
+<td>Return the specified $𝗻𝗼𝗱𝗲 unless it is possible to return the node saved with
+L<putNodeAs> under the specified 𝗻𝗮𝗺𝗲 and we are optionally in the specified
+@𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
+
+<tr><td>78<td>go<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -939,7 +952,7 @@ those tags under the current node. Position defaults to zero if not specified.
 Position can also be negative to index back from the top of the index array. *
 can be used as the last position to retrieve all nodes with the final tag.
 
-<tr><td>78<td>hasSingleChild<td><b></b><td>
+<tr><td>79<td>hasSingleChild<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -950,7 +963,7 @@ can be used as the last position to retrieve all nodes with the final tag.
 its parent ignoring any surrounding blank text and has the optional specified
 context, else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>79<td>hasSingleChildText<td><b></b><td>
+<tr><td>80<td>hasSingleChildText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -961,7 +974,7 @@ context, else return 𝘂𝗻𝗱𝗲𝗳.
 child is the only node under its parent ignoring any surrounding blank text and
 the child has the optional specified context, else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>80<td>hasSingleChildToDepth<td><b></b><td>
+<tr><td>81<td>hasSingleChildToDepth<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -975,14 +988,14 @@ specified depth in the specified optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 else ret
 L<hasSingleChildToDepth(0)|/hasSingleChildToDepth> is equivalent to
 L<hasSingleChild|/hasSingleChild>.
 
-<tr><td>81<td>height<td><b></b><td><td>Returns the height of the tree rooted at the specified $𝗻𝗼𝗱𝗲.
+<tr><td>82<td>height<td><b></b><td><td>Returns the height of the tree rooted at the specified $𝗻𝗼𝗱𝗲.
 
-<tr><td>82<td>help<td><b>h</b><td><td>Get help for a node and the editor
+<tr><td>83<td>help<td><b>h</b><td><td>Get help for a node and the editor
 
-<tr><td>83<td>index<td><b></b><td><td>Return the index of the specified $𝗻𝗼𝗱𝗲 in its parent index. Use
+<tr><td>84<td>index<td><b></b><td><td>Return the index of the specified $𝗻𝗼𝗱𝗲 in its parent index. Use
 L<position|/position> to find the position of a node under its parent.
 
-<tr><td>84<td>invert<td><b></b><td>
+<tr><td>85<td>invert<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -992,7 +1005,7 @@ L<position|/position> to find the position of a node under its parent.
 <td>Swap a parent and child node where the child is the only child of the parent and
 return the parent.
 
-<tr><td>85<td>invertFirst<td><b></b><td>
+<tr><td>86<td>invertFirst<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1002,7 +1015,7 @@ return the parent.
 <td>Swap a parent and child node where the child is the first child of the parent by
 placing the parent last in the child. Return the parent.
 
-<tr><td>86<td>invertLast<td><b></b><td>
+<tr><td>87<td>invertLast<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1012,7 +1025,7 @@ placing the parent last in the child. Return the parent.
 <td>Swap a parent and child node where the child is the last child of the parent by
 placing the parent first in the child. Return the parent.
 
-<tr><td>87<td>isEmpty<td><b></b><td>
+<tr><td>88<td>isEmpty<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1023,7 +1036,7 @@ placing the parent first in the child. Return the parent.
 content, not even a blank string of text. To test for blank nodes, see
 L<isAllBlankText|/isAllBlankText>.
 
-<tr><td>88<td>isFirst<td><b></b><td>
+<tr><td>89<td>isFirst<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1033,7 +1046,7 @@ L<isAllBlankText|/isAllBlankText>.
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it is first under its parent and optionally has
 the specified context, else return 𝘂𝗻𝗱𝗲𝗳
 
-<tr><td>89<td>isFirstN<td><b></b><td>
+<tr><td>90<td>isFirstN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1048,7 +1061,7 @@ specified by @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. If @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 con
 are checked as the context of the parent of $𝗻𝗼𝗱𝗲. Returns an array of nodes
 found or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these conditions.
 
-<tr><td>90<td>isFirstToDepth<td><b></b><td>
+<tr><td>91<td>isFirstToDepth<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1060,7 +1073,7 @@ found or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these 
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it is first to the specified depth else return
 𝘂𝗻𝗱𝗲𝗳
 
-<tr><td>91<td>isLast<td><b></b><td>
+<tr><td>92<td>isLast<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1070,7 +1083,7 @@ found or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these 
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it is last under its parent and optionally has the
 specified context, else return 𝘂𝗻𝗱𝗲𝗳
 
-<tr><td>92<td>isLastN<td><b></b><td>
+<tr><td>93<td>isLastN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1085,7 +1098,7 @@ specified by @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. If @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 con
 are checked as the context of the parent of $𝗻𝗼𝗱𝗲. Returns an array of nodes
 found or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these conditions.
 
-<tr><td>93<td>isLastToDepth<td><b></b><td>
+<tr><td>94<td>isLastToDepth<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1097,7 +1110,7 @@ found or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these 
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it is last to the specified depth else return
 𝘂𝗻𝗱𝗲𝗳
 
-<tr><td>94<td>isOnlyChild<td><b></b><td>
+<tr><td>95<td>isOnlyChild<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1107,7 +1120,7 @@ found or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these 
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it is the only node under its parent ignoring any
 surrounding blank text.
 
-<tr><td>95<td>isOnlyChildText<td><b></b><td>
+<tr><td>96<td>isOnlyChildText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1117,7 +1130,7 @@ surrounding blank text.
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it is a text node and it is an only child else and
 its parent is in the specified optional context else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>96<td>isOnlyChildToDepth<td><b></b><td>
+<tr><td>97<td>isOnlyChildToDepth<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1130,9 +1143,9 @@ its parent is in the specified optional context else return 𝘂𝗻𝗱𝗲𝗳
 children|/isOnlyChild> to the specified depth else return 𝘂𝗻𝗱𝗲𝗳.
 isOnlyChildToDepth(1) is the same as L<isOnlychild|/isOnlyChild>
 
-<tr><td>97<td>jsonString<td><b></b><td><td>Return a Json representation of a parse tree
+<tr><td>98<td>jsonString<td><b></b><td><td>Return a Json representation of a parse tree
 
-<tr><td>98<td>last<td><b></b><td>
+<tr><td>99<td>last<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1143,7 +1156,7 @@ isOnlyChildToDepth(1) is the same as L<isOnlychild|/isOnlyChild>
 node's context. See L<addLast|/addLast> to ensure that an expected node is in
 position.
 
-<tr><td>99<td>lastBy<td><b></b><td>
+<tr><td>100<td>lastBy<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1154,7 +1167,7 @@ position.
 post-order traversal from the specified $𝗻𝗼𝗱𝗲 or a hash of all last instances if
 no tags are specified.
 
-<tr><td>100<td>lastContextOf<td><b></b><td>
+<tr><td>101<td>lastContextOf<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1164,7 +1177,7 @@ no tags are specified.
 <td>Return the last node encountered in the specified context in a depth first
 reverse pre-order traversal of the L<parse|/parse> tree.
 
-<tr><td>101<td>lastDown<td><b></b><td>
+<tr><td>102<td>lastDown<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1175,7 +1188,7 @@ reverse pre-order traversal of the L<parse|/parse> tree.
 pre-order traversal from the specified $𝗻𝗼𝗱𝗲 or a hash of all last instances if
 no tags are specified.
 
-<tr><td>102<td>lastIn<td><b></b><td>
+<tr><td>103<td>lastIn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1185,7 +1198,7 @@ no tags are specified.
 <td>Return the last child node matching one of the named tags under the specified
 parent node.
 
-<tr><td>103<td>lastInIndex<td><b></b><td>
+<tr><td>104<td>lastInIndex<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1195,7 +1208,7 @@ parent node.
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it is last in its index and optionally L<at|/at>
 the specified context else 𝘂𝗻𝗱𝗲𝗳
 
-<tr><td>104<td>lastNot<td><b></b><td>
+<tr><td>105<td>lastNot<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1205,7 +1218,7 @@ the specified context else 𝘂𝗻𝗱𝗲𝗳
 <td>Return the last child node that does not match any of the named @𝘁𝗮𝗴𝘀 under the
 specified parent $𝗻𝗼𝗱𝗲. Return 𝘂𝗻𝗱𝗲𝗳 if there is no such child node.
 
-<tr><td>105<td>lastOf<td><b></b><td>
+<tr><td>106<td>lastOf<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1215,7 +1228,7 @@ specified parent $𝗻𝗼𝗱𝗲. Return 𝘂𝗻𝗱𝗲𝗳 if there is no s
 <td>Return an array of the nodes that are continuously last under their specified
 parent node and that match the specified list of tags.
 
-<tr><td>106<td>lastSibling<td><b></b><td>
+<tr><td>107<td>lastSibling<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1225,7 +1238,7 @@ parent node and that match the specified list of tags.
 <td>Return the last sibling of the specified $𝗻𝗼𝗱𝗲 in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 else
 𝘂𝗻𝗱𝗲𝗳
 
-<tr><td>107<td>lastText<td><b></b><td>
+<tr><td>108<td>lastText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1235,7 +1248,7 @@ parent node and that match the specified list of tags.
 <td>Return the last node under the specified $𝗻𝗼𝗱𝗲 if it is in the optional and it
 is a text node otherwise 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>108<td>lastTextMatches<td><b></b><td>
+<tr><td>109<td>lastTextMatches<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1248,7 +1261,7 @@ is a text node otherwise 𝘂𝗻𝗱𝗲𝗳.
 matches the specified regular expression; the specified $𝗻𝗼𝗱𝗲 is in the optional
 specified context. Else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>109<td>lastUntil<td><b></b><td>
+<tr><td>110<td>lastUntil<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1259,7 +1272,7 @@ specified context. Else return 𝘂𝗻𝗱𝗲𝗳.
 node matches the specified @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 or return 𝘂𝗻𝗱𝗲𝗳 if there is no such node.
 Return the last child of the specified $𝗻𝗼𝗱𝗲 if no @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 is specified.
 
-<tr><td>110<td>lastUntilText<td><b></b><td>
+<tr><td>111<td>lastUntilText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1270,7 +1283,7 @@ Return the last child of the specified $𝗻𝗼𝗱𝗲 if no @𝗰𝗼𝗻𝘁
 text node matches the specified @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 or return 𝘂𝗻𝗱𝗲𝗳 if there is no such
 node.
 
-<tr><td>111<td>lastWhile<td><b></b><td>
+<tr><td>112<td>lastWhile<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1281,7 +1294,7 @@ node.
 child node matches one of the specified @𝘁𝗮𝗴𝘀. Return the deepest such node
 encountered or else return 𝘂𝗻𝗱𝗲𝗳 if no such node is encountered.
 
-<tr><td>112<td>lastn<td><b></b><td>
+<tr><td>113<td>lastn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1294,10 +1307,10 @@ encountered or else return 𝘂𝗻𝗱𝗲𝗳 if no such node is encountered.
 context or 𝘂𝗻𝗱𝗲𝗳 if there is no such node. 𝗹𝗮𝘀𝘁𝗻(𝟭) is identical in effect to
 L<last|/last>.
 
-<tr><td>113<td>lineLocation<td><b></b><td><td>Return the line number.column location of this tag in its source file or string
+<tr><td>114<td>lineLocation<td><b></b><td><td>Return the line number.column location of this tag in its source file or string
 if the source was parsed with the L<line number|/lineNumber> option on.
 
-<tr><td>114<td>location<td><b></b><td>
+<tr><td>115<td>location<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1308,11 +1321,11 @@ if the source was parsed with the L<line number|/lineNumber> option on.
 or string if the source was parsed with the L<line number|/lineNumber> option
 on.
 
-<tr><td>115<td>matchNodesByRepresentation<td><b></b><td><td>Creates a hash of arrays of nodes that have the same representation in the
+<tr><td>116<td>matchNodesByRepresentation<td><b></b><td><td>Creates a hash of arrays of nodes that have the same representation in the
 specified $𝘁𝗿𝗲𝗲. Set L<representation|/representationLast> for each node in the
 tree before calling this method.
 
-<tr><td>116<td>matchesNextTags<td><b>mnt</b><td>
+<tr><td>117<td>matchesNextTags<td><b>mnt</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1322,7 +1335,7 @@ tree before calling this method.
 <td>Return the specified b<$node> if the siblings following the specified $𝗻𝗼𝗱𝗲
 L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>117<td>matchesPrevTags<td><b>mpt</b><td>
+<tr><td>118<td>matchesPrevTags<td><b>mpt</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1332,7 +1345,7 @@ L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳
 <td>Return the specified b<$node> if the siblings prior to the specified $𝗻𝗼𝗱𝗲
 L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>118<td>mergeDuplicateChildWithParent<td><b></b><td>
+<tr><td>119<td>mergeDuplicateChildWithParent<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1344,7 +1357,7 @@ attributes do not collide other than possibly the id in which case the parent id
 is used. Any labels on the child are transferred to the parent. The child node
 is then unwrapped and the parent node is returned.
 
-<tr><td>119<td>moveEndLast<td><b></b><td>
+<tr><td>120<td>moveEndLast<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1355,7 +1368,7 @@ is then unwrapped and the parent node is returned.
 Returns $𝗻𝗼𝗱𝗲 if the move was made successfully, else confess that the specified
 move is impossible.
 
-<tr><td>120<td>moveSelectionAfter<td><b>ma</b><td>
+<tr><td>121<td>moveSelectionAfter<td><b>ma</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1365,7 +1378,7 @@ move is impossible.
 <td>Move the current selection (if there is one) after the specified $𝗻𝗼𝗱𝗲 in the
 optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and return the specified $𝗻𝗼𝗱𝗲 on success else 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>121<td>moveSelectionBefore<td><b>mb</b><td>
+<tr><td>122<td>moveSelectionBefore<td><b>mb</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1375,7 +1388,7 @@ optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and return the specified $𝗻𝗼𝗱�
 <td>Move the current selection (if there is one) before the specified $𝗻𝗼𝗱𝗲 in the
 optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and return the specified $𝗻𝗼𝗱𝗲 on success else 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>122<td>moveSelectionFirst<td><b>mf</b><td>
+<tr><td>123<td>moveSelectionFirst<td><b>mf</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1386,7 +1399,7 @@ optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and return the specified $𝗻𝗼𝗱�
 specified $𝗻𝗼𝗱𝗲 in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and return the specified $𝗻𝗼𝗱𝗲 on
 success else 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>123<td>moveSelectionLast<td><b>ml</b><td>
+<tr><td>124<td>moveSelectionLast<td><b>ml</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1397,7 +1410,7 @@ success else 𝘂𝗻𝗱𝗲𝗳.
 specified $𝗻𝗼𝗱𝗲 in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and return the specified $𝗻𝗼𝗱𝗲 on
 success else 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>124<td>moveStartFirst<td><b></b><td>
+<tr><td>125<td>moveStartFirst<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1408,7 +1421,7 @@ success else 𝘂𝗻𝗱𝗲𝗳.
 Returns $𝗻𝗼𝗱𝗲 if the move was made successfully, else confess that the specified
 move is impossible.
 
-<tr><td>125<td>next<td><b></b><td>
+<tr><td>126<td>next<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1418,7 +1431,7 @@ move is impossible.
 <td>Return the node next to the specified $𝗻𝗼𝗱𝗲, optionally checking the next node's
 context. See L<addNext|/addNext> to ensure that an expected node is in position.
 
-<tr><td>126<td>nextIn<td><b></b><td>
+<tr><td>127<td>nextIn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1428,7 +1441,7 @@ context. See L<addNext|/addNext> to ensure that an expected node is in position.
 <td>Return the nearest sibling after the specified $𝗻𝗼𝗱𝗲 that matches one of the
 named tags or 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling node.
 
-<tr><td>127<td>nextN<td><b></b><td>
+<tr><td>128<td>nextN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1442,7 +1455,7 @@ $𝗡 tags of @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. If @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 co
 are checked as the context of the parent of $𝗻𝗼𝗱𝗲. Returns an array of nodes
 found or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these conditions.
 
-<tr><td>128<td>nextOn<td><b></b><td>
+<tr><td>129<td>nextOn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1454,7 +1467,7 @@ nodes with the specified tags. In scalar context return the last such node
 reached or the starting node if no such steps are possible. In array context
 return the start node and any following matching nodes.
 
-<tr><td>129<td>nextText<td><b></b><td>
+<tr><td>130<td>nextText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1464,7 +1477,7 @@ return the start node and any following matching nodes.
 <td>Return the node after the specified $𝗻𝗼𝗱𝗲 if it is in the optional and it is a
 text node otherwise 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>130<td>nextTextMatches<td><b></b><td>
+<tr><td>131<td>nextTextMatches<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1477,7 +1490,7 @@ text node otherwise 𝘂𝗻𝗱𝗲𝗳.
 matches the specified regular expression; the specified $𝗻𝗼𝗱𝗲 is in the optional
 specified context. Else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>131<td>nextUntil<td><b></b><td>
+<tr><td>132<td>nextUntil<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1488,7 +1501,7 @@ specified context. Else return 𝘂𝗻𝗱𝗲𝗳.
 tag of a sibling node matches one of the specified @𝘁𝗮𝗴𝘀. Return the matching
 sibling node else 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling node.
 
-<tr><td>132<td>nextWhile<td><b></b><td>
+<tr><td>133<td>nextWhile<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1499,7 +1512,7 @@ sibling node else 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling node.
 tag of each sibling node matches one of the specified @𝘁𝗮𝗴𝘀. Return the first
 sibling node that does not match else 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling.
 
-<tr><td>133<td>nextn<td><b></b><td>
+<tr><td>134<td>nextn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1512,7 +1525,7 @@ sibling node that does not match else 𝘂𝗻𝗱𝗲𝗳 if there is no such s
 context or 𝘂𝗻𝗱𝗲𝗳 if there is no such node. 𝗻𝗲𝘅𝘁𝗻(𝟭) is identical in effect to
 L<next|/next>.
 
-<tr><td>134<td>not<td><b></b><td>
+<tr><td>135<td>not<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1522,7 +1535,7 @@ L<next|/next>.
 <td>Return the specified $𝗻𝗼𝗱𝗲 if it does not match any of the specified tags, else
 𝘂𝗻𝗱𝗲𝗳
 
-<tr><td>135<td>overAllTags<td><b>oat</b><td>
+<tr><td>136<td>overAllTags<td><b>oat</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1532,7 +1545,7 @@ L<next|/next>.
 <td>Return the specified b<$node> if all of it's child nodes
 L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>136<td>overFirstTags<td><b>oft</b><td>
+<tr><td>137<td>overFirstTags<td><b>oft</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1542,7 +1555,7 @@ L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳
 <td>Return the specified b<$node> if the first of it's child nodes
 L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>137<td>overLastTags<td><b>olt</b><td>
+<tr><td>138<td>overLastTags<td><b>olt</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1552,20 +1565,20 @@ L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳
 <td>Return the specified b<$node> if the last of it's child nodes
 L<match|/atPositionMatch> the specified <@tags> else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>138<td>parentage<td><b>p</b><td><td>Return a reference to an array of the nodes along the path from the root to the
+<tr><td>139<td>parentage<td><b>p</b><td><td>Return a reference to an array of the nodes along the path from the root to the
 specified $𝗡𝗼𝗱𝗲 inclusive.
 
-<tr><td>139<td>path<td><b></b><td><td>Return a list of strings representing the path to a node from the root of the
+<tr><td>140<td>path<td><b></b><td><td>Return a list of strings representing the path to a node from the root of the
 parse tree which can then be reused by L<go|/go> to retrieve the node as long as
 the structure of the L<parse|/parse> tree has not changed along the path.
 
-<tr><td>140<td>pathString<td><b></b><td><td>Return a string representing the L<path|/path> to the specified $𝗻𝗼𝗱𝗲 from the
+<tr><td>141<td>pathString<td><b></b><td><td>Return a string representing the L<path|/path> to the specified $𝗻𝗼𝗱𝗲 from the
 root of the parse tree.
 
-<tr><td>141<td>position<td><b></b><td><td>Return the index of the specified $𝗻𝗼𝗱𝗲 in the content of the parent of the
+<tr><td>142<td>position<td><b></b><td><td>Return the index of the specified $𝗻𝗼𝗱𝗲 in the content of the parent of the
 $𝗻𝗼𝗱𝗲.
 
-<tr><td>142<td>present<td><b></b><td>
+<tr><td>143<td>present<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1576,7 +1589,7 @@ $𝗻𝗼𝗱𝗲.
 under a node or a hash {tag} = count for all the tags present under the node if
 no names are specified.
 
-<tr><td>143<td>prettyString<td><b></b><td>
+<tr><td>144<td>prettyString<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1586,7 +1599,7 @@ no names are specified.
 <td>Return a readable string representing a node of a L<parse|/parse> tree and all
 the nodes below it. Or use L<-p|/opString> $node
 
-<tr><td>144<td>prettyStringCDATA<td><b></b><td>
+<tr><td>145<td>prettyStringCDATA<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1596,19 +1609,19 @@ the nodes below it. Or use L<-p|/opString> $node
 <td>Return a readable string representing a node of a L<parse|/parse> tree and all
 the nodes below it with the text fields wrapped with <CDATA>...</CDATA>.
 
-<tr><td>145<td>prettyStringContent<td><b></b><td><td>Return a readable string representing all the nodes below a node of a
+<tr><td>146<td>prettyStringContent<td><b></b><td><td>Return a readable string representing all the nodes below a node of a
 L<parse|/parse> tree.
 
-<tr><td>146<td>prettyStringContentNumbered<td><b></b><td><td>Return a readable string representing all the nodes below a node of a
+<tr><td>147<td>prettyStringContentNumbered<td><b></b><td><td>Return a readable string representing all the nodes below a node of a
 L<parse|/parse> tree with numbering added.
 
-<tr><td>147<td>prettyStringDitaHeaders<td><b></b><td><td>Return a readable string representing the L<parse|/parse> tree below the
+<tr><td>148<td>prettyStringDitaHeaders<td><b></b><td><td>Return a readable string representing the L<parse|/parse> tree below the
 specified $𝗻𝗼𝗱𝗲 with appropriate headers. Or use L<-x|/opString> $node
 
-<tr><td>148<td>prettyStringEnd<td><b></b><td><td>Return a readable string representing a node of a L<parse|/parse> tree and all
+<tr><td>149<td>prettyStringEnd<td><b></b><td><td>Return a readable string representing a node of a L<parse|/parse> tree and all
 the nodes below it as a here document
 
-<tr><td>149<td>prettyStringNumbered<td><b></b><td>
+<tr><td>150<td>prettyStringNumbered<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1620,7 +1633,7 @@ the nodes below it with a L<number|/number> attached to each tag. The node
 numbers can then be used as described in L<Order|/Order> to monitor changes to
 the L<parse|/parse> tree.
 
-<tr><td>150<td>prev<td><b></b><td>
+<tr><td>151<td>prev<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1631,7 +1644,7 @@ the L<parse|/parse> tree.
 node's context. See L<addLast|/addLast> to ensure that an expected node is in
 position.
 
-<tr><td>151<td>prevIn<td><b></b><td>
+<tr><td>152<td>prevIn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1641,7 +1654,7 @@ position.
 <td>Return the nearest sibling node before the specified $𝗻𝗼𝗱𝗲 which matches one of
 the named tags or 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling node.
 
-<tr><td>152<td>prevN<td><b></b><td>
+<tr><td>153<td>prevN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1655,7 +1668,7 @@ tags of @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. If @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 contains
 checked as the context of the parent of $𝗻𝗼𝗱𝗲. Returns an array of nodes found
 or an empty array if the specified $𝗻𝗼𝗱𝗲 does not match these conditions.
 
-<tr><td>153<td>prevOn<td><b></b><td>
+<tr><td>154<td>prevOn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1667,7 +1680,7 @@ tags. In scalar context return the last such node reached or the starting node
 if no such steps are possible. In array context return the start node and any
 preceding matching nodes.
 
-<tr><td>154<td>prevText<td><b></b><td>
+<tr><td>155<td>prevText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1677,7 +1690,7 @@ preceding matching nodes.
 <td>Return the node before the specified $𝗻𝗼𝗱𝗲 if it is in the optional and it is a
 text node otherwise 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>155<td>prevTextMatches<td><b></b><td>
+<tr><td>156<td>prevTextMatches<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1690,7 +1703,7 @@ text node otherwise 𝘂𝗻𝗱𝗲𝗳.
 matches the specified regular expression; the specified $𝗻𝗼𝗱𝗲 is in the optional
 specified context. Else return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>156<td>prevUntil<td><b></b><td>
+<tr><td>157<td>prevUntil<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1701,7 +1714,7 @@ specified context. Else return 𝘂𝗻𝗱𝗲𝗳.
 the tag of a sibling node matches one of the specified @𝘁𝗮𝗴𝘀. Return the
 matching sibling node else 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling node.
 
-<tr><td>157<td>prevWhile<td><b></b><td>
+<tr><td>158<td>prevWhile<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1712,7 +1725,7 @@ matching sibling node else 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling node
 the tag of each sibling node matches one of the specified @𝘁𝗮𝗴𝘀. Return the
 first sibling node that does not match else 𝘂𝗻𝗱𝗲𝗳 if there is no such sibling.
 
-<tr><td>158<td>prevn<td><b></b><td>
+<tr><td>159<td>prevn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1725,7 +1738,7 @@ first sibling node that does not match else 𝘂𝗻𝗱𝗲𝗳 if there is no 
 context or 𝘂𝗻𝗱𝗲𝗳 if there is no such node. 𝗽𝗿𝗲𝘃𝗻(𝟭) is identical in effect to
 L<prev|/prev>.
 
-<tr><td>159<td>putContentAfter<td><b></b><td>
+<tr><td>160<td>putContentAfter<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1736,7 +1749,7 @@ L<prev|/prev>.
 node is in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. Return the specified $𝗻𝗼𝗱𝗲 or confess if the
 move is not possible.
 
-<tr><td>160<td>putContentBefore<td><b></b><td>
+<tr><td>161<td>putContentBefore<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1747,7 +1760,7 @@ move is not possible.
 node is in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. Return the specified $𝗻𝗼𝗱𝗲 or confess if the
 move is not possible.
 
-<tr><td>161<td>putFirstAsComment<td><b></b><td>
+<tr><td>162<td>putFirstAsComment<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1758,7 +1771,7 @@ move is not possible.
 </table>
 <td>Put a comment first under the specified $𝗻𝗼𝗱𝗲 and return the specified $𝗻𝗼𝗱𝗲.
 
-<tr><td>162<td>putFirstAsText<td><b></b><td>
+<tr><td>163<td>putFirstAsText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1769,7 +1782,7 @@ move is not possible.
 </table>
 <td>Add a new text node first under a parent and return the new text node.
 
-<tr><td>163<td>putLastAsComment<td><b></b><td>
+<tr><td>164<td>putLastAsComment<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1780,7 +1793,7 @@ move is not possible.
 </table>
 <td>Put a comment last under the specified $𝗻𝗼𝗱𝗲 and return the specified $𝗻𝗼𝗱𝗲.
 
-<tr><td>164<td>putLastAsText<td><b></b><td>
+<tr><td>165<td>putLastAsText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1791,7 +1804,7 @@ move is not possible.
 </table>
 <td>Add a new text node last under a parent and return the new text node.
 
-<tr><td>165<td>putNextAsComment<td><b></b><td>
+<tr><td>166<td>putNextAsComment<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1802,7 +1815,7 @@ move is not possible.
 </table>
 <td>Put a comment after the specified $𝗻𝗼𝗱𝗲 and return the specified $𝗻𝗼𝗱𝗲
 
-<tr><td>166<td>putNextAsText<td><b></b><td>
+<tr><td>167<td>putNextAsText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1813,7 +1826,7 @@ move is not possible.
 </table>
 <td>Add a new text node following the specified $𝗻𝗼𝗱𝗲 and return the new text node.
 
-<tr><td>167<td>putNextFirstCut<td><b></b><td>
+<tr><td>168<td>putNextFirstCut<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1823,7 +1836,7 @@ move is not possible.
 <td>Move the specified $𝗻𝗼𝗱𝗲 so it is first in the next node with the optional
 context. Return the specified $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>168<td>putNextFirstCut2<td><b></b><td>
+<tr><td>169<td>putNextFirstCut2<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1834,7 +1847,19 @@ context. Return the specified $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻�
 optional context of the next node. Return the specified $𝗻𝗼𝗱𝗲 on success else
 return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>169<td>putPrevAsComment<td><b></b><td>
+<tr><td>170<td>putNodeAs<td><b>put</b><td>
+<table cellpadding="20" border="0" width="100%">
+<tr><th>Parameter<th>Description
+
+<tr><td>$name<td>Save name
+
+<tr><td>@context<td>Optional context
+
+</table>
+<td>Return the specified $𝗻𝗼𝗱𝗲 after saving it under the specified $𝗻𝗮𝗺𝗲 if we are
+in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
+
+<tr><td>171<td>putPrevAsComment<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1845,7 +1870,7 @@ return 𝘂𝗻𝗱𝗲𝗳 on failure.
 </table>
 <td>Put a comment before the specified $𝗽𝗮𝗿𝗲𝗻𝘁 parentand return the specified $𝗻𝗼𝗱𝗲
 
-<tr><td>170<td>putPrevAsText<td><b></b><td>
+<tr><td>172<td>putPrevAsText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1856,7 +1881,7 @@ return 𝘂𝗻𝗱𝗲𝗳 on failure.
 </table>
 <td>Add a new text node following the specified $𝗻𝗼𝗱𝗲 and return the new text node
 
-<tr><td>171<td>putPrevLastCut<td><b></b><td>
+<tr><td>173<td>putPrevLastCut<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1866,7 +1891,7 @@ return 𝘂𝗻𝗱𝗲𝗳 on failure.
 <td>Move the specified $𝗻𝗼𝗱𝗲 so it is last in the preceding node with the optional
 context. Return the specified $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>172<td>putPrevLastCut2<td><b></b><td>
+<tr><td>174<td>putPrevLastCut2<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1877,7 +1902,7 @@ context. Return the specified $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻�
 optional context of the preceding node. Return the specified $𝗻𝗼𝗱𝗲 on success
 else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>173<td>putSiblingsAfterParent<td><b></b><td>
+<tr><td>175<td>putSiblingsAfterParent<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1889,7 +1914,7 @@ after the parent of the specified $𝗻𝗼𝗱𝗲 if the specified $𝗻𝗼�
 optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. Return the specified $𝗻𝗼𝗱𝗲 if the move was made successfully,
 else confess that the specified move is not possible.
 
-<tr><td>174<td>putSiblingsBeforeParent<td><b></b><td>
+<tr><td>176<td>putSiblingsBeforeParent<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1901,7 +1926,7 @@ before the parent of the specified $𝗻𝗼𝗱𝗲 if the specified $𝗻𝗼�
 optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁. Return the specified $𝗻𝗼𝗱𝗲 if the move was made successfully,
 else confess that the specified move is not possible.
 
-<tr><td>175<td>putSiblingsFirst<td><b></b><td>
+<tr><td>177<td>putSiblingsFirst<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1912,7 +1937,7 @@ else confess that the specified move is not possible.
 one level and place them first under the specified $𝗻𝗼𝗱𝗲 preceding any existing
 content. Return the specified $𝗻𝗼𝗱𝗲.
 
-<tr><td>176<td>putSiblingsLast<td><b></b><td>
+<tr><td>178<td>putSiblingsLast<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1923,7 +1948,7 @@ content. Return the specified $𝗻𝗼𝗱𝗲.
 one level so that they are last under the specified $𝗻𝗼𝗱𝗲 following any existing
 content. Return the specified $𝗻𝗼𝗱𝗲.
 
-<tr><td>177<td>putUpNextCut<td><b></b><td>
+<tr><td>179<td>putUpNextCut<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1933,7 +1958,7 @@ content. Return the specified $𝗻𝗼𝗱𝗲.
 <td>Move the specified $𝗻𝗼𝗱𝗲 so it is next after its parent. Return the specified
 $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>178<td>putUpNextCut2<td><b></b><td>
+<tr><td>180<td>putUpNextCut2<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1943,7 +1968,7 @@ $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 <td>Move the specified $𝗻𝗼𝗱𝗲 so it is next after its grandparent. Return the
 specified $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>179<td>putUpPrevCut<td><b></b><td>
+<tr><td>181<td>putUpPrevCut<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1953,7 +1978,7 @@ specified $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failu
 <td>Move the specified $𝗻𝗼𝗱𝗲 so it is prior to its its parent. Return the specified
 $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>180<td>putUpPrevCut2<td><b></b><td>
+<tr><td>182<td>putUpPrevCut2<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1963,7 +1988,7 @@ $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 <td>Move the specified $𝗻𝗼𝗱𝗲 so it is prior to its grandparent. Return the specified
 $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>181<td>renameAttr<td><b></b><td>
+<tr><td>183<td>renameAttr<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -1979,7 +2004,7 @@ $𝗻𝗼𝗱𝗲 on success else return 𝘂𝗻𝗱𝗲𝗳 on failure.
 the $𝗻𝗼𝗱𝗲. To prevent inadvertent changes to an existing attribute use
 L<changeAttr|/changeAttr>.
 
-<tr><td>182<td>renameAttrValue<td><b></b><td>
+<tr><td>184<td>renameAttrValue<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2000,7 +2025,7 @@ as long as the attribute $𝗼𝗹𝗱 has the value $𝗼𝗹𝗱𝗩𝗮𝗹�
 regardless of what changes were made. To prevent inadvertent changes to existing
 attributes use L<changeAttrValue|/changeAttrValue>.
 
-<tr><td>183<td>renameAttrXtr<td><b></b><td>
+<tr><td>185<td>renameAttrXtr<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2010,7 +2035,7 @@ attributes use L<changeAttrValue|/changeAttrValue>.
 <td>Rename the attributes @𝗮𝘁𝘁𝗿 as far as possible to xtrc or xtrf. Returns an array
 of the attributes that could not be so renamed.
 
-<tr><td>184<td>replaceContentWithText<td><b></b><td>
+<tr><td>186<td>replaceContentWithText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2020,7 +2045,7 @@ of the attributes that could not be so renamed.
 <td>Replace the content of a node with the specified texts and return the replaced
 content
 
-<tr><td>185<td>replaceWithBlank<td><b></b><td>
+<tr><td>187<td>replaceWithBlank<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2030,7 +2055,7 @@ content
 <td>Replace a node (and all its content) with a new blank text node and return the
 new node.
 
-<tr><td>186<td>replaceWithText<td><b></b><td>
+<tr><td>188<td>replaceWithText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2042,7 +2067,43 @@ new node.
 <td>Replace a node (and all its content) with a new text node and return the new
 node.
 
-<tr><td>187<td>set<td><b></b><td>
+<tr><td>189<td>reportNode<td><b>rn</b><td>
+<table cellpadding="20" border="0" width="100%">
+<tr><th>Parameter<th>Description
+
+<tr><td>$label<td>Label
+
+<tr><td>@context<td>Optional context
+
+</table>
+<td>Print the parse tree starting at the specified $𝗻𝗼𝗱𝗲 identified by the specified
+$𝗹𝗮𝗯𝗲𝗹 if we are in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
+
+<tr><td>190<td>reportNodeAttributes<td><b>rna</b><td>
+<table cellpadding="20" border="0" width="100%">
+<tr><th>Parameter<th>Description
+
+<tr><td>$label<td>Label
+
+<tr><td>@context<td>Optional context
+
+</table>
+<td>Print the attributes of the specified $𝗻𝗼𝗱𝗲 identified by the specified $𝗹𝗮𝗯𝗲𝗹
+if we are in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
+
+<tr><td>191<td>reportNodeContext<td><b>rnc</b><td>
+<table cellpadding="20" border="0" width="100%">
+<tr><th>Parameter<th>Description
+
+<tr><td>$label<td>Label
+
+<tr><td>@context<td>Optional context
+
+</table>
+<td>Print the context of the specified $𝗻𝗼𝗱𝗲 identified by the specified $𝗹𝗮𝗯𝗲𝗹 if
+we are in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
+
+<tr><td>192<td>set<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2052,7 +2113,7 @@ node.
 <td>Set the values of some attributes in a node and return the node. Identical in
 effect to L<setAttr|/setAttr>.
 
-<tr><td>188<td>setAttr<td><b></b><td>
+<tr><td>193<td>setAttr<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2062,17 +2123,17 @@ effect to L<setAttr|/setAttr>.
 <td>Set the values of some attributes in a node and return the node. Identical in
 effect to L<set|/set>.
 
-<tr><td>189<td>setDepthProfile<td><b></b><td><td>Sets the L<depthProfile|/depthProfile> for every node in the specified $𝘁𝗿𝗲𝗲.
+<tr><td>194<td>setDepthProfile<td><b></b><td><td>Sets the L<depthProfile|/depthProfile> for every node in the specified $𝘁𝗿𝗲𝗲.
 The last set L<depthProfile|/depthProfile> for a specific niode can be retrieved
 from L<depthProfileLast|/depthProfileLast>.
 
-<tr><td>190<td>setRepresentationAsTagsAndText<td><b></b><td><td>Sets the L<representationLast|/representationLast> for every node in the
+<tr><td>195<td>setRepresentationAsTagsAndText<td><b></b><td><td>Sets the L<representationLast|/representationLast> for every node in the
 specified $𝘁𝗿𝗲𝗲 via L<stringTagsAndText|/stringTagsAndText>.
 
-<tr><td>191<td>setRepresentationAsText<td><b></b><td><td>Sets the L<representationLast|/representationLast> for every node in the
+<tr><td>196<td>setRepresentationAsText<td><b></b><td><td>Sets the L<representationLast|/representationLast> for every node in the
 specified $𝘁𝗿𝗲𝗲 via L<stringText|/stringText>.
 
-<tr><td>192<td>setSelectionEnd<td><b>se</b><td>
+<tr><td>197<td>setSelectionEnd<td><b>se</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2082,7 +2143,7 @@ specified $𝘁𝗿𝗲𝗲 via L<stringText|/stringText>.
 <td>Set the selection to end at the specified $𝗻𝗼𝗱𝗲 in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and
 return the specified $𝗻𝗼𝗱𝗲 on success else 𝘂𝗻𝗱𝗲𝗳..
 
-<tr><td>193<td>setSelectionStart<td><b>ss</b><td>
+<tr><td>198<td>setSelectionStart<td><b>ss</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2092,7 +2153,7 @@ return the specified $𝗻𝗼𝗱𝗲 on success else 𝘂𝗻𝗱𝗲𝗳..
 <td>Set the selection to start at the specified $𝗻𝗼𝗱𝗲 in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 and
 return the specified $𝗻𝗼𝗱𝗲 on success else 𝘂𝗻𝗱𝗲𝗳..
 
-<tr><td>194<td>splitAfter<td><b></b><td>
+<tr><td>199<td>splitAfter<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2104,7 +2165,7 @@ specified $𝗻𝗼𝗱𝗲 are retained by the existing parent while any preced
 become siblings of the new parent node which is placed before the existing
 parent. The new parent is returned
 
-<tr><td>195<td>splitAndWrapFromStart<td><b></b><td>
+<tr><td>200<td>splitAndWrapFromStart<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2120,7 +2181,7 @@ wrapping the splitting node and all preceding nodes from the previous splitting
 node or the start with the specified $𝘄𝗿𝗮𝗽ping node with optional %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀.
 Returns an array of the wrapping nodes created.
 
-<tr><td>196<td>splitAndWrapToEnd<td><b></b><td>
+<tr><td>201<td>splitAndWrapToEnd<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2137,7 +2198,7 @@ following nodes up until the next splitting node or the end of the sequence with
 newly created nodes whose tag is $𝘄𝗿𝗮𝗽 with optional attributes %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀.
 Returns an array of the wrapping nodes so created.
 
-<tr><td>197<td>splitBefore<td><b></b><td>
+<tr><td>202<td>splitBefore<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2149,7 +2210,7 @@ the specified $𝗻𝗼𝗱𝗲 are retained by the existing parent while any fo
 siblings become siblings of the new parent node which is placed after the
 existing parent. The new parent is returned.
 
-<tr><td>198<td>splitParentAfter<td><b>spa</b><td>
+<tr><td>203<td>splitParentAfter<td><b>spa</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2159,7 +2220,7 @@ existing parent. The new parent is returned.
 <td>Finish and restart the parent of the specified $𝗻𝗼𝗱𝗲 just after the specified
 $𝗻𝗼𝗱𝗲 and return the newly created parent node on success or 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>199<td>splitParentBefore<td><b>spb</b><td>
+<tr><td>204<td>splitParentBefore<td><b>spb</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2169,30 +2230,30 @@ $𝗻𝗼𝗱𝗲 and return the newly created parent node on success or 𝘂�
 <td>Finish and restart the parent of the specified $𝗻𝗼𝗱𝗲 just before the specified
 $𝗻𝗼𝗱𝗲 and return the newly created parent node on success or 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>200<td>string<td><b></b><td><td>Return a dense string representing a node of a L<parse|/parse> tree and all the
+<tr><td>205<td>string<td><b></b><td><td>Return a dense string representing a node of a L<parse|/parse> tree and all the
 nodes below it. Or use L<-s|/opString> $𝗻𝗼𝗱𝗲.
 
-<tr><td>201<td>stringContent<td><b></b><td><td>Return a string representing all the nodes below a node of a L<parse|/parse>
+<tr><td>206<td>stringContent<td><b></b><td><td>Return a string representing all the nodes below a node of a L<parse|/parse>
 tree.
 
-<tr><td>202<td>stringMd5Sum<td><b></b><td><td>Return the md5 sum of the dense L<string|/string> representing a node of a
+<tr><td>207<td>stringMd5Sum<td><b></b><td><td>Return the md5 sum of the dense L<string|/string> representing a node of a
 L<parse|/parse> tree minus its L<id> and all the nodes below it. Or use
 L<-g|/opString> $𝗻𝗼𝗱𝗲. The id of the top most node is not included in the md5sum
 to equate parse trees that would otherwise only differ by the arbitrary root
 node id value.
 
-<tr><td>203<td>stringNode<td><b></b><td><td>Return a string representing the specified $𝗻𝗼𝗱𝗲 showing the attributes, labels
+<tr><td>208<td>stringNode<td><b></b><td><td>Return a string representing the specified $𝗻𝗼𝗱𝗲 showing the attributes, labels
 and node number.
 
-<tr><td>204<td>stringQuoted<td><b></b><td><td>Return a quoted string representing a L<parse|/parse> tree a node of a
+<tr><td>209<td>stringQuoted<td><b></b><td><td>Return a quoted string representing a L<parse|/parse> tree a node of a
 L<parse|/parse> tree and all the nodes below it. Or use L<-o|/opString> $𝗻𝗼𝗱𝗲.
 
-<tr><td>205<td>stringTagsAndText<td><b></b><td><td>Return a string showing just the tags and text at and below a specified $𝗻𝗼𝗱𝗲.
+<tr><td>210<td>stringTagsAndText<td><b></b><td><td>Return a string showing just the tags and text at and below a specified $𝗻𝗼𝗱𝗲.
 
-<tr><td>206<td>stringText<td><b></b><td><td>Return a string showing just the text of the text nodes (separated by blanks) at
+<tr><td>211<td>stringText<td><b></b><td><td>Return a string showing just the text of the text nodes (separated by blanks) at
 and below a specified $𝗻𝗼𝗱𝗲.
 
-<tr><td>207<td>swapFirstSibling<td><b>sfs</b><td>
+<tr><td>212<td>swapFirstSibling<td><b>sfs</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2201,7 +2262,7 @@ and below a specified $𝗻𝗼𝗱𝗲.
 </table>
 <td>Swap $𝗻𝗼𝗱𝗲 with its first sibling node and return $𝗻𝗼𝗱𝗲.
 
-<tr><td>208<td>swapLastSibling<td><b>sls</b><td>
+<tr><td>213<td>swapLastSibling<td><b>sls</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2210,7 +2271,7 @@ and below a specified $𝗻𝗼𝗱𝗲.
 </table>
 <td>Swap $𝗻𝗼𝗱𝗲 with its last sibling node and return $𝗻𝗼𝗱𝗲.
 
-<tr><td>209<td>swapNext<td><b>sn</b><td>
+<tr><td>214<td>swapNext<td><b>sn</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2221,7 +2282,7 @@ and below a specified $𝗻𝗼𝗱𝗲.
 specified context and the next node matches the rest. Return the node that
 originally followed $𝗻𝗼𝗱𝗲 on success or 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>210<td>swapPrev<td><b>sp</b><td>
+<tr><td>215<td>swapPrev<td><b>sp</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2232,7 +2293,7 @@ originally followed $𝗻𝗼𝗱𝗲 on success or 𝘂𝗻𝗱𝗲𝗳 on fail
 specified context and the previous node matches the rest. Return the node that
 originally followed $𝗻𝗼𝗱𝗲 on success or 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>211<td>swapTagWithParent<td><b></b><td>
+<tr><td>216<td>swapTagWithParent<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2243,7 +2304,7 @@ originally followed $𝗻𝗼𝗱𝗲 on success or 𝘂𝗻𝗱𝗲𝗳 on fail
 $𝗻𝗼𝗱𝗲 is in the specified context and return (parent of $𝗻𝗼𝗱𝗲, $𝗻𝗼𝗱𝗲) or () if
 there is no such parent node.
 
-<tr><td>212<td>unwrap<td><b>u</b><td>
+<tr><td>217<td>unwrap<td><b>u</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2255,7 +2316,7 @@ containing the specified $𝗻𝗼𝗱𝗲 and return the parent node. Returns �
 attempt is made to unwrap a text node. Confesses if an attempt is made to unwrap
 the root node.
 
-<tr><td>213<td>unwrapContentsKeepingText<td><b></b><td>
+<tr><td>218<td>unwrapContentsKeepingText<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2266,7 +2327,7 @@ the root node.
 trailing space to prevent unwrapped content from being elided and return the
 specified $𝗻𝗼𝗱𝗲 else 𝘂𝗻𝗱𝗲𝗳 if not in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
 
-<tr><td>214<td>unwrapOnlyChild<td><b></b><td>
+<tr><td>219<td>unwrapOnlyChild<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2277,7 +2338,7 @@ specified $𝗻𝗼𝗱𝗲 else 𝘂𝗻𝗱𝗲𝗳 if not in the optional @�
 child of its parent. Return the specified $𝗻𝗼𝗱𝗲 regardless unless the node is
 not in the optional context in which case return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>215<td>unwrapParentOfOnlyChild<td><b></b><td>
+<tr><td>220<td>unwrapParentOfOnlyChild<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2288,7 +2349,7 @@ not in the optional context in which case return 𝘂𝗻𝗱𝗲𝗳.
 is the only child of its parent. Return the specified $𝗻𝗼𝗱𝗲 regardless unless
 the node is not in the optional context in which case return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>216<td>unwrapParentsWithSingleChild<td><b></b><td>
+<tr><td>221<td>unwrapParentsWithSingleChild<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2299,7 +2360,7 @@ the node is not in the optional context in which case return 𝘂𝗻𝗱𝗲�
 which have only a single child and return the specified $𝗻𝗼𝗱𝗲 regardless unless
 the node is not in the optional context in which case return 𝘂𝗻𝗱𝗲𝗳.
 
-<tr><td>217<td>up<td><b></b><td>
+<tr><td>222<td>up<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2311,7 +2372,7 @@ context or return 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the
 L<parse|/parse> tree. See L<addWrapWith|/addWrapWith> to ensure that an expected
 node is in position.
 
-<tr><td>218<td>upThru<td><b></b><td>
+<tr><td>223<td>upThru<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2321,7 +2382,7 @@ node is in position.
 <td>Go up the specified path from the specified $𝗻𝗼𝗱𝗲 returning the node at the top
 or 𝘂𝗻𝗱𝗲𝗳 if no such node exists.
 
-<tr><td>219<td>upUntil<td><b></b><td>
+<tr><td>224<td>upUntil<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2332,7 +2393,7 @@ or 𝘂𝗻𝗱𝗲𝗳 if no such node exists.
 specified @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 or 𝘂𝗻𝗱𝗲𝗳 if there is no such node. Returns the parent node of
 the specified $𝗻𝗼𝗱𝗲 if no @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 is specified.
 
-<tr><td>220<td>upUntilFirst<td><b></b><td>
+<tr><td>225<td>upUntilFirst<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2341,7 +2402,7 @@ the specified $𝗻𝗼𝗱𝗲 if no @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 is specified
 </table>
 <td>Move up from the specified $𝗻𝗼𝗱𝗲 until we reach the root or a first node.
 
-<tr><td>221<td>upUntilIsOnlyChild<td><b></b><td>
+<tr><td>226<td>upUntilIsOnlyChild<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2350,7 +2411,7 @@ the specified $𝗻𝗼𝗱𝗲 if no @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 is specified
 </table>
 <td>Move up from the specified $𝗻𝗼𝗱𝗲 until we reach the root or another only child.
 
-<tr><td>222<td>upUntilLast<td><b></b><td>
+<tr><td>227<td>upUntilLast<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2359,7 +2420,7 @@ the specified $𝗻𝗼𝗱𝗲 if no @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 is specified
 </table>
 <td>Move up from the specified $𝗻𝗼𝗱𝗲 until we reach the root or a last node.
 
-<tr><td>223<td>upWhile<td><b></b><td>
+<tr><td>228<td>upWhile<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2370,7 +2431,7 @@ the specified $𝗻𝗼𝗱𝗲 if no @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 is specified
 matches on of the specified <@tags>. Return the last matching node or 𝘂𝗻𝗱𝗲𝗳 if
 no node matched any of the specified @𝘁𝗮𝗴𝘀.
 
-<tr><td>224<td>upWhileFirst<td><b></b><td>
+<tr><td>229<td>upWhileFirst<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2380,7 +2441,7 @@ no node matched any of the specified @𝘁𝗮𝗴𝘀.
 <td>Move up from the specified $𝗻𝗼𝗱𝗲 as long as each node is a first node or return
 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is not a first node.
 
-<tr><td>225<td>upWhileIsOnlyChild<td><b></b><td>
+<tr><td>230<td>upWhileIsOnlyChild<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2390,7 +2451,7 @@ no node matched any of the specified @𝘁𝗮𝗴𝘀.
 <td>Move up from the specified $𝗻𝗼𝗱𝗲 as long as each node is an only child or return
 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is not an only child.
 
-<tr><td>226<td>upWhileLast<td><b></b><td>
+<tr><td>231<td>upWhileLast<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2400,7 +2461,7 @@ no node matched any of the specified @𝘁𝗮𝗴𝘀.
 <td>Move up from the specified $𝗻𝗼𝗱𝗲 as long as each node is a last node or return
 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is not a last node.
 
-<tr><td>227<td>upn<td><b></b><td>
+<tr><td>232<td>upn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2414,7 +2475,7 @@ node reached optionally checking the parent node's context or 𝘂𝗻𝗱𝗲�
 no such node.L<upn(1)|/up> is identical in effect to L<up|/up>. Or use
 L<ancestry|/ancestry> to get the path back to the root node.
 
-<tr><td>228<td>wrapContentWith<td><b>wcw</b><td>
+<tr><td>233<td>wrapContentWith<td><b>wcw</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2428,7 +2489,7 @@ $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀: the specified $𝗻
 in turn, contains all the content of the specified $𝗻𝗼𝗱𝗲.\mReturns the new
 wrapping node.
 
-<tr><td>229<td>wrapDown<td><b></b><td>
+<tr><td>234<td>wrapDown<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2439,7 +2500,7 @@ wrapping node.
 original node up - deepening the L<parse|/parse> tree - return the array of
 wrapping nodes if want array else the last wrapping node.
 
-<tr><td>230<td>wrapFirstN<td><b></b><td>
+<tr><td>235<td>wrapFirstN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2454,7 +2515,7 @@ wrapping nodes if want array else the last wrapping node.
 specified $𝘁𝗮𝗴 and return the new node or 𝘂𝗻𝗱𝗲𝗳 if there are no such nodes to
 wrap.
 
-<tr><td>231<td>wrapFromFirst<td><b></b><td>
+<tr><td>236<td>wrapFromFirst<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2466,7 +2527,7 @@ wrap.
 <td>Wrap this $𝗻𝗼𝗱𝗲 and any preceding siblings with a new node created from the
 specified $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀 and return the wrapping node.
 
-<tr><td>232<td>wrapFromFirstOrLastIn<td><b></b><td>
+<tr><td>237<td>wrapFromFirstOrLastIn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2480,7 +2541,7 @@ last prior sibling node whose tag matches one of the tags in @𝘁𝗮𝗿𝗴�
 specified $𝗻𝗼𝗱𝗲 using $𝘁𝗮𝗴 as the tag of the wrapping node and return the
 wrapping node.
 
-<tr><td>233<td>wrapLastN<td><b></b><td>
+<tr><td>238<td>wrapLastN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2495,7 +2556,7 @@ wrapping node.
 specified $𝘁𝗮𝗴 and return the new node or 𝘂𝗻𝗱𝗲𝗳 if there are no such nodes to
 wrap.
 
-<tr><td>234<td>wrapNext<td><b></b><td>
+<tr><td>239<td>wrapNext<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2509,7 +2570,7 @@ specified $𝘁𝗮𝗴. If the optional context is specified then it should mat
 first node, next node and the context of the parent of the $𝗻𝗼𝗱𝗲 as far as it is
 specified. Return the new node created or 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>235<td>wrapNextN<td><b></b><td>
+<tr><td>240<td>wrapNextN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2524,7 +2585,7 @@ specified. Return the new node created or 𝘂𝗻𝗱𝗲𝗳 on failure.
 @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 with the specified $𝘁𝗮𝗴 and return the new node or 𝘂𝗻𝗱𝗲𝗳 if there are
 no such nodes to wrap.
 
-<tr><td>236<td>wrapPrev<td><b></b><td>
+<tr><td>241<td>wrapPrev<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2538,7 +2599,7 @@ specified $𝘁𝗮𝗴. If the optional context is specified then it should mat
 first node, previous node and the context of the parent of the $𝗻𝗼𝗱𝗲 as far as
 it is specified. Return the new node created or 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-<tr><td>237<td>wrapPrevN<td><b></b><td>
+<tr><td>242<td>wrapPrevN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2553,7 +2614,7 @@ it is specified. Return the new node created or 𝘂𝗻𝗱𝗲𝗳 on failure.
 @𝗰𝗼𝗻𝘁𝗲𝘅𝘁 with the specified $𝘁𝗮𝗴 and return the new node or 𝘂𝗻𝗱𝗲𝗳 if there are
 no such nodes to wrap.
 
-<tr><td>238<td>wrapRuns<td><b></b><td>
+<tr><td>243<td>wrapRuns<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2566,7 +2627,7 @@ no such nodes to wrap.
 already wrapped with $𝘄𝗿𝗮𝗽. Returns an array of any wrapping nodes created.
 Returns () if the specified $𝗻𝗼𝗱𝗲 is not in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
 
-<tr><td>239<td>wrapSiblingsAfter<td><b></b><td>
+<tr><td>244<td>wrapSiblingsAfter<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2579,7 +2640,7 @@ Returns () if the specified $𝗻𝗼𝗱𝗲 is not in the optional @𝗰𝗼�
 created from the specified $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀 and return the newly created
 node.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the last node under its parent.
 
-<tr><td>240<td>wrapSiblingsBefore<td><b></b><td>
+<tr><td>245<td>wrapSiblingsBefore<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2592,7 +2653,7 @@ node.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the la
 created from the specified $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀 and return the newly created
 node.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the first node under its parent.
 
-<tr><td>241<td>wrapToLast<td><b></b><td>
+<tr><td>246<td>wrapToLast<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2604,7 +2665,7 @@ node.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the fi
 <td>Wrap this $𝗻𝗼𝗱𝗲 and any following siblings with a new node created from the
 specified $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀 and return the wrapping node.
 
-<tr><td>242<td>wrapToLastOrFirstIn<td><b></b><td>
+<tr><td>247<td>wrapToLastOrFirstIn<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2618,7 +2679,7 @@ sibling that matches one of the specified @𝗳𝗶𝗻𝗱 nodes or all followi
 if no such match occurs, with a new node created from the specified $𝘁𝗮𝗴 and
 return the new wrapping node.
 
-<tr><td>243<td>wrapUp<td><b></b><td>
+<tr><td>248<td>wrapUp<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2629,7 +2690,7 @@ return the new wrapping node.
 @𝘁𝗮𝗴𝘀 forcing the original node down - deepening the L<parse|/parse> tree -
 return the array of wrapping nodes if want array else the last wrapping node.
 
-<tr><td>244<td>wrapWith<td><b></b><td>
+<tr><td>249<td>wrapWith<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2643,7 +2704,7 @@ return the array of wrapping nodes if want array else the last wrapping node.
 tree - return the new wrapping node. See L<addWrapWith|/addWrapWith> to perform
 this operation conditionally.
 
-<tr><td>245<td>wrapWithAll<td><b>ww</b><td>
+<tr><td>250<td>wrapWithAll<td><b>ww</b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2653,7 +2714,7 @@ this operation conditionally.
 <td>Wrap this $𝗻𝗼𝗱𝗲 wrapped with the specified @𝘁𝗮𝗴𝘀 and return the last wrapping
 node.
 
-<tr><td>246<td>wrapWithN<td><b></b><td>
+<tr><td>251<td>wrapWithN<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2667,7 +2728,7 @@ more then $𝗡 entries, the remainder are checked as the context of $𝗻𝗼�
 the upper most wrapping node or 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 does not match
 these conditions.
 
-<tr><td>247<td>zipDown<td><b></b><td>
+<tr><td>252<td>zipDown<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
@@ -2678,7 +2739,7 @@ these conditions.
 formed by merging the preceding and following siblings if they have the same
 tag.
 
-<tr><td>248<td>zipDownOnce<td><b></b><td>
+<tr><td>253<td>zipDownOnce<td><b></b><td>
 <table cellpadding="20" border="0" width="100%">
 <tr><th>Parameter<th>Description
 
