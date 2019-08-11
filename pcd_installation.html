@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body>
+
+
+
+<p>Install <a href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> by copying and pasting the commands below into a terminal on a computer with <a href="https://ubuntu.com/download/desktop">Ubuntu 18</a> installed.</p>
+
+<pre><code>  sudo apt update                                                               # Install Linux and Perl modules
+  sudo apt -y install curl geany geany-plugins libspice-client-glib-2.0-dev build-essential sharutils unoconv mc zip unzip qemu-kvm openjdk-11-jdk-headless at pmount openssh-server obs-studio moreutils xournal libx11-dev libpng-dev libjpeg-dev libcairo-dev libglib2.0-dev libgirepository1.0-dev libpango1.0-dev gtk+-3.0-dev dos2unix poppler-utils samba p7zip rename html-xml-utils secure-delete rar unrar
+  sudo cpan install Test::SharedFork Module::Build Data::Edit::Xml::Lint Aws::Polly::Select Digest::SHA1 Google::Translate::Languages Unicode::UTF8 CPAN::Uploader Test2::Bundle::More Parse::CSV Acme::Tools Glib::Object::Introspection Glib Gtk3 Text::Hunspell CGI Data::GUID Data::Send::Local Digest::SHA1 Text::CSV
+
+  sudo apt install python-pip                                                   # Install aws cli
+  mkdir .aws                                                                    # Create aws credentials folder
+  nano .aws/config                                                              # Cut, paste, save from your local system files
+  nano .aws/credentials                                                         # Ditto
+
+  aws s3 cp s3://exchange.ryffine/pcd/zipPcd.zip . --profile fmc                # Download PCD install package
+  aws s3 cp s3://exchange.ryffine/pcd/zipPcd.pl  . --profile fmc                # ditto
+  perl zipPcd.pl                                                                # Install PCD</code></pre>
+
+<p>Kill all your terminal and <a href="https://www.geany.org">Geany</a> sessions to pick up the installation changes.</p>
+
+<p>To test <a href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> from the <a href="https://en.wikipedia.org/wiki/Command-line_interface">command line</a>:</p>
+
+<pre><code>  makeWithPerl --run r/z/pleaseChangeDita/test.pcd</code></pre>
+
+<p>which runs the <a href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> against the supplied <a href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> file:</p>
+
+<pre><code>  r/z/pleaseChangeDita/1.dita</code></pre>
+
+<p>to produce:</p>
+
+<pre><code>  r/z/pleaseChangeDita/out/1.dita</code></pre>
+
+<p>and the following run time messages:</p>
+
+<pre><code>  02:59:58 Change d under c under b to D at /home/ubuntu/r/z/pleaseChangeDita/test.pcd line 2
+  02:59:58 BBBB  at /home/ubuntu/r/z/pleaseChangeDita/test.pcd line 8
+  &lt;b&gt;
+    &lt;c&gt;
+      &lt;d/&gt;
+    &lt;/c&gt;
+  &lt;/b&gt;
+  02:59:58 Change B to b at /home/ubuntu/r/z/pleaseChangeDita/test.pcd line 6
+  02:59:58 Merge two adjacent b at /home/ubuntu/r/z/pleaseChangeDita/test.pcd line 10</code></pre>
+
+<p>To test from <a href="https://www.geany.org">Geany</a>:</p>
+
+<pre><code>  geany r/z/pleaseChangeDita/test.pcd</code></pre>
+
+<p>Press <b>F8</b> for a syntax check. Press <b>F9</b> to execute the <a href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> to get results similar in the message window to those shown above.</p>
+
+<p>The PCD manual is at: <a href="https://philiprbrenan.github.io/data_edit_xml_edit_commands.html">https://philiprbrenan.github.io/data_edit_xml_edit_commands.html</a></p>
+
+
+</body>
+
+</html>
+
+
