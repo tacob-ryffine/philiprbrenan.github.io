@@ -1,11 +1,15 @@
+
 <div style="width: 80em">
 
 <h1>Editing Dita using Geany or PCD</h1>
 
 <p><a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> is a Perl extension module that can help you edit <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> either
-interactively using <a format="html" href="https://www.geany.org">Geany</a> or in batch using <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files.  These two options
-are discussed in the following sections followed by a command reference listing
-the commands available.
+interactively using <a format="html" href="https://www.geany.org">Geany</a> or in batch using <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files.
+
+<h2>Configuring Geany to Edit Dita and PCD</h2>
+
+<p>Please obtain a version of <a format="html" href="https://ubuntu.com/download/desktop">Ubuntu 18</a> and follow the instructions at
+<a format="html" href="https://github.com/philiprbrenan/philiprbrenan.github.io/blob/master/pcd_installation.md">PCD installation</a>.
 
 <h2>Editing Dita interactively with Geany</h2>
 
@@ -73,12 +77,16 @@ by line until the end of the block or the <a format="html" href="https://metacpa
 completes successfully, the description line for that block is printed out to
 show that it "fired".
 
-<p><a format="html" href="https://www.geany.org">Geany</a> on <a format="html" href="https://en.wikipedia.org/wiki/Linux">linux</a> has been configured as an <a format="html" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> to make editing both
+<p><a format="html" href="https://www.geany.org">Geany</a> on <a format="html" href="https://ubuntu.com/download/desktop">Ubuntu 18</a> has been configured as an <a format="html" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> to make editing both
 <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> and test <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files a pleasant experience with all the usual
 facilities provided by such an <a format="html" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> such as help choosing command names,
 testing the syntax of <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files once they are written, then executing
 them against <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files and showing the execution results.</p>
 
+<p>You can also place <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files into the same <a format="html" href="https://s3.console.aws.amazon.com/s3/home">S3</a> Bucket or <a format="html" href="https://github.com">GitHub</a> repo
+as your <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files and then process them in bulk with <a format="html" href="https://philiprbrenan.github.io/selfServiceXref.pdf">Self Service Xref</a>.
+
+</div>
 
 <h1>Methods in Data::Edit::Xml that can be used to Edit Dita using Geany or PCD</h1>
 
