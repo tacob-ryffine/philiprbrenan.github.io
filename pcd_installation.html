@@ -22,8 +22,9 @@
   nano .aws/config                                                              # Cut, paste, save from your local system files
   nano .aws/credentials                                                         # Ditto
 
-  aws s3 cp s3://exchange.ryffine/pcd/zipPcd.zip . --profile fmc                # Download PCD install package
-  aws s3 cp s3://exchange.ryffine/pcd/zipPcd.pl  . --profile fmc                # ditto
+  aws s3 cp s3://exchange.ryffine/pcd/zipPcd.zip .                              # Download PCD install package
+  aws s3 cp s3://exchange.ryffine/pcd/zipPcd.pl  .                              # ditto
+
   perl zipPcd.pl                                                                # Install PCD</code></pre>
 
 <p>Kill all your terminal and <a href="https://www.geany.org">Geany</a> sessions to pick up the installation changes.</p>
