@@ -10,8 +10,9 @@ computer with [Ubuntu 18](https://ubuntu.com/download/desktop) installed.
     nano .aws/config                                                              # Cut, paste, save from your local system files
     nano .aws/credentials                                                         # Ditto
 
-    aws s3 cp s3://exchange.ryffine/pcd/zipPcd.zip . --profile fmc                # Download PCD install package
-    aws s3 cp s3://exchange.ryffine/pcd/zipPcd.pl  . --profile fmc                # ditto
+    aws s3 cp s3://exchange.ryffine/pcd/zipPcd.zip .                              # Download PCD install package
+    aws s3 cp s3://exchange.ryffine/pcd/zipPcd.pl  .                              # ditto
+
     perl zipPcd.pl                                                                # Install PCD
 
 Kill all your terminal and [Geany](https://www.geany.org)  sessions to pick up the installation
