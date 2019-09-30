@@ -16,92 +16,7 @@
 
 <div style="width: 80em">
 
-<h1>Editing Dita using Geany or PCD</h1>
-
-<p>L[dex] is a Perl extension module that can help you edit L[Dita] either
-interactively using L[Geany] or in batch using L[PCD] files.
-
-<h2>Configuring Geany to Edit Dita and PCD</h2>
-
-<p>Please obtain a version of L[Ubuntu] and follow the instructions at
-L[pcdInstall].
-
-<h2>Editing Dita interactively with Geany</h2>
-
-<p>You can use many of the methods found in L[dex] one at a time directly from
-the L[Geany] editor when it has been configured for L[Dita] editing. The
-methods executed are recorded in log visible in another L[Geany] tab so that
-they can be edited directly into a program that is being developed to use
-L[dex] directly from L[Perl] or from L[pcd].
-
-<p>The table below lists the methods that can be used in L[Geany].  Simply type
-the method name and any parameters up against a closing <b>&gt;</b> or
-<b>&gt;</b> as shown on line <b> 13 </b> like this:
-
-<p><img src="/images/mlp_start.png"/>
-
-<p>and press <b> shift+Enter </b> to merge the two lists:
-
-<p><img src="/images/mlp_finish.png"/>
-
-
-<h2>Editing Dita in batch using PCD</h2>
-
-<p>L[PCD] files contain a list of L[dex] commands, one per line, that are applied
-to each node of each of the parse trees produced by parsing all of the L[DITA]
-files found in the same directory tree as the L[PCD] file.
-
-<p><a href="https://github.com/philiprbrenan/pleaseChangeDita">This
-repository</a> contains two L[DITA] l[concept]s and one L[PCD] file. The L[PCD]
-file unwraps a <b>b</b> tag found under another <b>b</b> tag.
-
-<p>There are four types of line in a L[PCD] file:
-
-<p><pre>
-1
-2   # Comment
-3   Unwrap b under b and delete empty paragraphs
-4        unwrap b b
-5        cutIfEmpty p
-</pre></p>
-
-<table cellpadding="20" border="0">
-<tr><th>Line<th>Name<th>Description
-
-<tr><td>1<td>Blank lines      <td>Blank lines are ignored
-
-<tr><td>2<td>Comment lines    <td>If the first non space character is <b>#</b>
-then this is a comment line and it is ignored.
-
-<tr><td>3<td>Description lines<td>If the first character is not a space it is a
-description line whose purpose is to communicate with other humans what the
-following commands aim to do.
-
-<tr><td>4<td>Command lines    <td>If the first character is a space then the
-rest of the line is command line: a method name chosen from L[dex] followed by
-any parameters separated from each other by one or more spaces.
-
-</table>
-
-<p>Each L[PCD] file can contain zero or more description lines. Each description
-line can be followed by zero or more command lines called a "block of command
-lines" or "block" for short. L[PCD] executes each block against each node in
-each of the parse trees constructed by parsing all of the L[DITA] files found
-in the same folder as the L[PCD] files.  Execution of the block continues line
-by line until the end of the block or the L[dex] method fails. If the block
-completes successfully, the description line for that block is printed out to
-show that it "fired".
-
-<p>L[Geany] on L[Ubuntu] has been configured as an L[IDE] to make editing both
-L[PCD] and test L[DITA] files a pleasant experience with all the usual
-facilities provided by such an L[IDE] such as help choosing command names,
-testing the syntax of L[PCD] files once they are written, then executing
-them against L[DITA] files and showing the execution results.</p>
-
-<p>You can also place l[PCD] files into the same L[S3] Bucket or L[github] repo
-as your L[dita] files and then process them in bulk with L[ssxr].
-
-<h1>Methods in Data::Edit::Xml that can be used to Edit Dita using Geany or PCD</h1>
+<h1>Methods in Data::Edit::Xml that can be used to Edit Dita</h1>
 
 <h2>Immediately useful methods</h2>
 <p>The following methods are frequently use to make simple changes:
@@ -2637,7 +2552,92 @@ preceding and following siblings if they have the same tag.
 
 </table>
 
-<p>Updated: 2019-09-29 at 18:47:28
+
+<h1>Editing Dita using Geany or PCD</h1>
+
+<p><a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> is a Perl extension module that can help you edit <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> either
+interactively using <a format="html" href="https://www.geany.org">Geany</a> or in batch using <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files.
+
+<h2>Configuring Geany to Edit Dita and PCD</h2>
+
+<p>Please obtain a version of <a format="html" href="https://ubuntu.com/download/desktop">Ubuntu 18</a> and follow the instructions at
+<a format="html" href="https://github.com/philiprbrenan/philiprbrenan.github.io/blob/master/pcd_installation.md">PCD installation</a>.
+
+<h2>Editing Dita interactively with Geany</h2>
+
+<p>You can use many of the methods found in <a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> one at a time directly from
+the <a format="html" href="https://www.geany.org">Geany</a> editor when it has been configured for <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> editing. The
+methods executed are recorded in log visible in another <a format="html" href="https://www.geany.org">Geany</a> tab so that
+they can be edited directly into a program that is being developed to use
+<a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> directly from <a format="html" href="http://www.perl.org/">Perl</a> or from <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a>.
+
+<p>The table below lists the methods that can be used in <a format="html" href="https://www.geany.org">Geany</a>.  Simply type
+the method name and any parameters up against a closing <b>&gt;</b> or
+<b>&gt;</b> as shown on line <b> 13 </b> like this:
+
+<p><img src="/images/mlp_start.png"/>
+
+<p>and press <b> shift+Enter </b> to merge the two lists:
+
+<p><img src="/images/mlp_finish.png"/>
+
+
+<h2>Editing Dita in batch using PCD</h2>
+
+<p><a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files contain a list of <a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> commands, one per line, that are applied
+to each node of each of the parse trees produced by parsing all of the <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a>
+files found in the same directory tree as the <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> file.
+
+<p><a href="https://github.com/philiprbrenan/pleaseChangeDita">This
+repository</a> contains two <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part3-all-inclusive/langRef/technicalContent/concept.html#concept">Dita Concept</a>s and one <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> file. The <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a>
+file unwraps a <b>b</b> tag found under another <b>b</b> tag.
+
+<p>There are four types of line in a <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> file:
+
+<p><pre>
+1
+2   # Comment
+3   Unwrap b under b and delete empty paragraphs
+4        unwrap b b
+5        cutIfEmpty p
+</pre></p>
+
+<table cellpadding="20" border="0">
+<tr><th>Line<th>Name<th>Description
+
+<tr><td>1<td>Blank lines      <td>Blank lines are ignored
+
+<tr><td>2<td>Comment lines    <td>If the first non space character is <b>#</b>
+then this is a comment line and it is ignored.
+
+<tr><td>3<td>Description lines<td>If the first character is not a space it is a
+description line whose purpose is to communicate with other humans what the
+following commands aim to do.
+
+<tr><td>4<td>Command lines    <td>If the first character is a space then the
+rest of the line is command line: a method name chosen from <a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> followed by
+any parameters separated from each other by one or more spaces.
+
+</table>
+
+<p>Each <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> file can contain zero or more description lines. Each description
+line can be followed by zero or more command lines called a "block of command
+lines" or "block" for short. <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> executes each block against each node in
+each of the parse trees constructed by parsing all of the <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files found
+in the same folder as the <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files.  Execution of the block continues line
+by line until the end of the block or the <a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> method fails. If the block
+completes successfully, the description line for that block is printed out to
+show that it "fired".
+
+<p><a format="html" href="https://www.geany.org">Geany</a> on <a format="html" href="https://ubuntu.com/download/desktop">Ubuntu 18</a> has been configured as an <a format="html" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> to make editing both
+<a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> and test <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files a pleasant experience with all the usual
+facilities provided by such an <a format="html" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> such as help choosing command names,
+testing the syntax of <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files once they are written, then executing
+them against <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files and showing the execution results.</p>
+
+<p>You can also place <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files into the same <a format="html" href="https://s3.console.aws.amazon.com/s3/home">S3</a> Bucket or <a format="html" href="https://github.com">GitHub</a> repo
+as your <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files and then process them in bulk with <a format="html" href="https://philiprbrenan.github.io/selfServiceXref.pdf">Self Xref</a>.
+<p>Updated: 2019-09-30 at 20:59:28
 </div>
 </body>
 </html>
