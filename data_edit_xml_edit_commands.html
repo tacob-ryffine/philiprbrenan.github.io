@@ -53,42 +53,53 @@ can be used as the last position to retrieve all nodes with the final tag.
 
 <tr class="l1"><td><td><td><td>@path<td>Search specification.
 
-<tr class="l0"><td>4<td>prettyString<td><b></b><td><td>Return a readable string representing a node of a L&lt;parse|/parse&gt; tree and all
+<tr class="l0"><td>4<td>joinWithText<td><b></b><td><td>Insert some text between the children of the current $𝗻𝗼𝗱𝗲 as specified by $𝘁𝗲𝘅𝘁
+between all the children of the current $node as long as they all have a tag of
+$𝗼𝘃𝗲𝗿. Return the current $node on success or 𝘂𝗻𝗱𝗲𝗳 on failure.
+
+
+<tr class="l0"><td><td><td><td>$text<td>Text
+
+<tr class="l0"><td><td><td><td>$over<td>Child tag
+
+<tr class="l0"><td><td><td><td>@context<td>Optional context
+
+<tr class="l1"><td>5<td>prettyString<td><b></b><td><td>Return a readable string representing a node of a L&lt;parse|/parse&gt; tree and all
 the nodes below it. Or use L&lt;-p|/opString&gt; $node
 
 
-<tr class="l0"><td><td><td><td>$depth<td>Optional depth.
+<tr class="l1"><td><td><td><td>$depth<td>Optional depth.
 
-<tr class="l1"><td>5<td>splitAndWrapToEnd<td><b></b><td><td>Split the sequence of child nodes under the specified $𝗽𝗮𝗿𝗲𝗻𝘁 node on those
+<tr class="l0"><td>6<td>splitAndWrapToEnd<td><b></b><td><td>Split the sequence of child nodes under the specified $𝗽𝗮𝗿𝗲𝗻𝘁 node on those
 child nodes whose tag value is $𝘀𝗽𝗹𝗶𝘁 wrapping the splitting node and all
 following nodes up until the next splitting node or the end of the sequence with
 newly created nodes whose tag is $𝘄𝗿𝗮𝗽 with optional attributes %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀.
 Returns an array of the wrapping nodes so created.
 
 
-<tr class="l1"><td><td><td><td>$split<td>Tag of splitting nodes
+<tr class="l0"><td><td><td><td>$split<td>Tag of splitting nodes
 
-<tr class="l1"><td><td><td><td>$wrap<td>Tag for wrapping node
+<tr class="l0"><td><td><td><td>$wrap<td>Tag for wrapping node
 
-<tr class="l1"><td><td><td><td>%attributes<td>Attributes for wrapping nodes
+<tr class="l0"><td><td><td><td>%attributes<td>Attributes for wrapping nodes
 
-<tr class="l0"><td>6<td>unwrap<td><b>u</b><td><td>Unwrap the specified $𝗻𝗼𝗱𝗲 by inserting its content into its parent at the point
+<tr class="l1"><td>7<td>unwrap<td><b>u</b><td><td>Unwrap the specified $𝗻𝗼𝗱𝗲 by inserting its content into its parent at the point
 containing the specified $𝗻𝗼𝗱𝗲 and return the parent node. Returns 𝘂𝗻𝗱𝗲𝗳 if an
 attempt is made to unwrap a text node. Confesses if an attempt is made to unwrap
 the root node.
 
 
-<tr class="l0"><td><td><td><td>@context<td>Optional context.
+<tr class="l1"><td><td><td><td>@context<td>Optional context.
 
-<tr class="l1"><td>7<td>wrapWith<td><b></b><td><td>Wrap the specified $𝗻𝗼𝗱𝗲 in a new node created from the specified $𝘁𝗮𝗴 and
+<tr class="l0"><td>8<td>wrapWith<td><b></b><td><td>Wrap the specified $𝗻𝗼𝗱𝗲 in a new node created from the specified $𝘁𝗮𝗴 and
 %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀 forcing the specified $𝗻𝗼𝗱𝗲 down - deepening the L&lt;parse|/parse&gt;
 tree - return the new wrapping node. See L&lt;addWrapWith|/addWrapWith&gt; to perform
 this operation conditionally.
 
 
-<tr class="l1"><td><td><td><td>$tag<td>Tag for the new node or tag
+<tr class="l0"><td><td><td><td>$tag<td>Tag for the new node or tag
 
-<tr class="l1"><td><td><td><td>%attributes<td>Attributes for the new node or tag.
+<tr class="l0"><td><td><td><td>%attributes<td>Attributes for the new node or tag.
 
 </table>
 
@@ -1283,8 +1294,6 @@ the specified context, else return 𝘂𝗻𝗱𝗲𝗳.
 between all the children of the current $node as long as they all have a tag of
 $𝗼𝘃𝗲𝗿. Return the current $node on success or 𝘂𝗻𝗱𝗲𝗳 on failure.
 
-
-<tr class="l0"><td><td><td><td>$text<td>Text
 
 <tr class="l0"><td><td><td><td>$over<td>Child tag
 
@@ -2665,7 +2674,7 @@ them against <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os
 
 <p>You can also place <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files into the same <a format="html" href="https://s3.console.aws.amazon.com/s3/home">S3</a> Bucket or <a format="html" href="https://github.com">GitHub</a> repo
 as your <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files and then process them in bulk with <a format="html" href="https://philiprbrenan.github.io/selfServiceXref.pdf">Self Xref</a>.
-<p>Updated: 2019-10-04 at 17:35:30
+<p>Updated: 2019-10-04 at 18:08:39
 </div>
 </body>
 </html>
