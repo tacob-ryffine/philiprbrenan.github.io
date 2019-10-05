@@ -86,7 +86,7 @@ Returns an array of the wrapping nodes so created.
 <tr class="l1"><td>7<td>unwrap<td><b>u</b><td><td>Unwrap the specified $𝗻𝗼𝗱𝗲 by inserting its content into its parent at the point
 containing the specified $𝗻𝗼𝗱𝗲 and return the parent node. Returns 𝘂𝗻𝗱𝗲𝗳 if an
 attempt is made to unwrap a text node. Confesses if an attempt is made to unwrap
-the root node.\mFor
+the root node. For
 
 
 <tr class="l1"><td><td><td><td>@context<td>Optional context.
@@ -413,8 +413,8 @@ L&lt;renameAttrValue|/renameAttrValue&gt;.
 
 <tr class="l1"><td>37<td>changeText<td><b></b><td><td>If the specified $𝗻𝗼𝗱𝗲 is a text node in the specified context then the
 specified 𝘀𝘂𝗯 is passed the text of the node in L&lt;$_&gt;, any changes to which are
-recorded in the text of the $𝗻𝗼𝗱𝗲.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is not
-a text node in the specified optional context else it returns the result of
+recorded in the text of the $𝗻𝗼𝗱𝗲. Returns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is not a
+text node in the specified optional context else it returns the result of
 executing the specified 𝘀𝘂𝗯.
 
 
@@ -1070,11 +1070,11 @@ can be used as the last position to retrieve all nodes with the final tag.
 
 
 <tr class="l0"><td>154<td>goFish<td><b></b><td><td>A debug version of L&lt;go|/go&gt; that returns additional information explaining any
-failure to reach the node identified by the L&lt;path|/path&gt;.\mReturns ([𝗿𝗲𝗮𝗰𝗵𝗮𝗯𝗹𝗲
-𝘁𝗮𝗴...], 𝗳𝗮𝗶𝗹𝗶𝗻𝗴 𝘁𝗮𝗴, [𝗽𝗼𝘀𝘀𝗶𝗯𝗹𝗲 𝘁𝗮𝗴...]) where:\m=over\m=item 𝗿𝗲𝗮𝗰𝗵𝗮𝗯𝗹𝗲 𝘁𝗮𝗴\mthe
-path elements successfully traversed;\m=item 𝗳𝗮𝗶𝗹𝗶𝗻𝗴 𝘁𝗮𝗴\mthe failing
-element;\m=item 𝗽𝗼𝘀𝘀𝗶𝗯𝗹𝗲 𝘁𝗮𝗴\mthe possibilities at the point where the path
-failed if it failed else 𝘂𝗻𝗱𝗲𝗳.\m=back\mParameters:
+failure to reach the node identified by the L&lt;path|/path&gt;. Returns ([𝗿𝗲𝗮𝗰𝗵𝗮𝗯𝗹𝗲
+𝘁𝗮𝗴...], 𝗳𝗮𝗶𝗹𝗶𝗻𝗴 𝘁𝗮𝗴, [𝗽𝗼𝘀𝘀𝗶𝗯𝗹𝗲 𝘁𝗮𝗴...]) where: =over =item 𝗿𝗲𝗮𝗰𝗵𝗮𝗯𝗹𝗲 𝘁𝗮𝗴 the
+path elements successfully traversed; =item 𝗳𝗮𝗶𝗹𝗶𝗻𝗴 𝘁𝗮𝗴 the failing element;
+=item 𝗽𝗼𝘀𝘀𝗶𝗯𝗹𝗲 𝘁𝗮𝗴 the possibilities at the point where the path failed if it
+failed else 𝘂𝗻𝗱𝗲𝗳. =back Parameters:
 
 
 <tr class="l0"><td><td><td><td>@path<td>Search specification.
@@ -2102,7 +2102,7 @@ we are in the optional @𝗰𝗼𝗻𝘁𝗲𝘅𝘁.
 <tr class="l1"><td><td><td><td>@context<td>Optional context
 
 <tr class="l0"><td>310<td>requiredCleanUp<td><b></b><td><td>Replace a node with a required cleanup node around the text of the replaced node
-with special characters replaced by symbols.\mReturns the specified $𝗻𝗼𝗱𝗲.
+with special characters replaced by symbols. Returns the specified $𝗻𝗼𝗱𝗲.
 
 
 <tr class="l0"><td><td><td><td>$outputclass<td>Optional outputclass attribute of required cleanup tag
@@ -2277,7 +2277,7 @@ there is no such parent node.
 <tr class="l0"><td>340<td>unwrap<td><b>u</b><td><td>Unwrap the specified $𝗻𝗼𝗱𝗲 by inserting its content into its parent at the point
 containing the specified $𝗻𝗼𝗱𝗲 and return the parent node. Returns 𝘂𝗻𝗱𝗲𝗳 if an
 attempt is made to unwrap a text node. Confesses if an attempt is made to unwrap
-the root node.\mFor
+the root node. For
 
 
 <tr class="l1"><td>341<td>unwrapContentsKeepingText<td><b></b><td><td>Unwrap all the non text nodes below the specified $𝗻𝗼𝗱𝗲 adding a leading and a
@@ -2395,7 +2395,7 @@ L&lt;ancestry|/ancestry&gt; to get the path back to the root node.
 
 <tr class="l1"><td>359<td>wrapContentWith<td><b>wcw</b><td><td>Wrap the content of the specified $𝗻𝗼𝗱𝗲 in a new node created from the specified
 $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀: the specified $𝗻𝗼𝗱𝗲 then contains just the new node which,
-in turn, contains all the content of the specified $𝗻𝗼𝗱𝗲.\mReturns the new
+in turn, contains all the content of the specified $𝗻𝗼𝗱𝗲. Returns the new
 wrapping node.
 
 
@@ -2503,7 +2503,7 @@ Returns () if the specified $𝗻𝗼𝗱𝗲 is not in the optional @𝗰𝗼�
 
 <tr class="l0"><td>370<td>wrapSiblingsAfter<td><b></b><td><td>If there are any siblings after the specified $𝗻𝗼𝗱𝗲, wrap them with a new node
 created from the specified $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀 and return the newly created
-node.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the last node under its parent.
+node. Returns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the last node under its parent.
 
 
 <tr class="l0"><td><td><td><td>$tag<td>Tag for new node
@@ -2512,7 +2512,7 @@ node.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the la
 
 <tr class="l1"><td>371<td>wrapSiblingsBefore<td><b></b><td><td>If there are any siblings before the specified $𝗻𝗼𝗱𝗲, wrap them with a new node
 created from the specified $𝘁𝗮𝗴 and %𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀 and return the newly created
-node.\mReturns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the first node under its parent.
+node. Returns 𝘂𝗻𝗱𝗲𝗳 if the specified $𝗻𝗼𝗱𝗲 is the first node under its parent.
 
 
 <tr class="l1"><td><td><td><td>$tag<td>Tag for new node
@@ -2674,7 +2674,7 @@ them against <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os
 
 <p>You can also place <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::PCD</a> files into the same <a format="html" href="https://s3.console.aws.amazon.com/s3/home">S3</a> Bucket or <a format="html" href="https://github.com">GitHub</a> repo
 as your <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> files and then process them in bulk with <a format="html" href="https://philiprbrenan.github.io/selfServiceXref.pdf">Self Xref</a>.
-<p>Updated: 2019-10-05 at 20:24:10
+<p>Updated: 2019-10-05 at 20:27:30
 </div>
 </body>
 </html>
