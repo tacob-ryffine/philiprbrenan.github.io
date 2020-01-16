@@ -1,0 +1,182 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body>
+
+
+
+<ul id="index">
+  <li><a href="#The-Online-Content-Ryffiner">The Online Content Ryffiner.</a>
+    <ul>
+      <li><a href="#We-have-the-following-building-blocks">We have the following building blocks:</a>
+        <ul>
+          <li><a href="#DEX">DEX</a></li>
+          <li><a href="#DTT">DTT</a>
+            <ul>
+              <li><a href="#Parallel-processing">Parallel processing</a></li>
+              <li><a href="#Tabular-Reporting">Tabular Reporting</a></li>
+              <li><a href="#File-manipulation">File manipulation</a></li>
+            </ul>
+          </li>
+          <li><a href="#DEXX">DEXX</a></li>
+          <li><a href="#DEXL">DEXL</a></li>
+          <li><a href="#DEXR">DEXR</a></li>
+          <li><a href="#GBS">GBS</a></li>
+          <li><a href="#PCD">PCD</a></li>
+          <li><a href="#GHC">GHC</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#Deploying-the-building-blocks">Deploying the building blocks</a>
+    <ul>
+      <li><a href="#Deployment-on-Linux">Deployment on Linux</a></li>
+      <li><a href="#Online-Content-Ryffiner">Online Content Ryffiner</a>
+        <ul>
+          <li><a href="#Convert">Convert</a></li>
+          <li><a href="#Log">Log</a></li>
+          <li><a href="#Status">Status</a></li>
+          <li><a href="#Reports">Reports</a></li>
+          <li><a href="#Report-ids-not-used">Report ids not used</a></li>
+          <li><a href="#Report-required-clean-ups">Report required clean ups</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#Recommendation">Recommendation</a></li>
+</ul>
+
+<h1 id="The-Online-Content-Ryffiner">The Online Content Ryffiner.</h1>
+
+<h2 id="We-have-the-following-building-blocks">We have the following building blocks:</h2>
+
+<h3 id="DEX">DEX</h3>
+
+<p><a format="html" href="https://metacpan.org/pod/Data::Edit::Xml">Data::Edit::Xml</a> is a library of <b>610</b> methods for editing <a format="html" href="https://en.wikipedia.org/wiki/XML">Xml</a> in bulk which has been used to perform all of our major conversion projects starting with <b>HPE</b>. This is the library that has enabled <i>Laura</i> and <i>Sabine</i> to hone their document corpii to their exacting requirements using technology only available through <a format="html" href="http://www,ryffine.com">Ryffine</a>.</p>
+
+<h3 id="DTT">DTT</h3>
+
+<p><a format="html" href="https://metacpan.org/pod/Data::Table::Text">Data::Table::Text</a> is a library of <b>361</b> methods for performing the many diverse operations required to support conversions to <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> at scale. The most important features of <a format="html" href="https://metacpan.org/pod/Data::Table::Text">Data::Table::Text</a> are:</p>
+
+<h4 id="Parallel-processing">Parallel processing</h4>
+
+<p>Highly parallel processing across one or more multi <a format="html" href="https://en.wikipedia.org/wiki/Central_processing_unit">Cpu</a> computers on <a format="html" href="http://aws.amazon.com">Amazon Web Services</a>. This enables us to get results in minutes rather than days.</p>
+
+<h4 id="Tabular-Reporting">Tabular Reporting</h4>
+
+<p>Methods for writing the many reports associated with each conversion.</p>
+
+<h4 id="File-manipulation">File manipulation</h4>
+
+<p>Methods for reading, writing, constructing, deconstructing: files, absolute file names and relative file names.</p>
+
+<h3 id="DEXX">DEXX</h3>
+
+<p><a format="html" href="https://metacpan.org/release/Data-Edit-Xml-Xref">Data::Edit::Xml::Xref</a> is a module which is used to check the cross references in a document corpus and fix erroneous ones where possible. <a format="html" href="https://metacpan.org/release/Data-Edit-Xml-Xref">Data::Edit::Xml::Xref</a> uses <a format="html" href="https://metacpan.org/pod/Data::Table::Text">Data::Table::Text</a> to do this processing in a highly parallel manner - it is possible, for example, to do a non fixing <i>Xref</i> of the 50K documents in the <b>SF</b> corpus in under 3 minutes.</p>
+
+<h3 id="DEXL">DEXL</h3>
+
+<p><a format="html" href="https://metacpan.org/release/Data-Edit-Xml-Lint">Data::Edit::Xml::Lint</a> is a library which is used to lint <a format="html" href="https://en.wikipedia.org/wiki/XML">Xml</a> via <a format="html" href="http://xmlsoft.org/xmllint.html">Xml Lint</a> a document corpus and report any failures in the most actionable way possible. It used on every conversion to guide the choice of the next item to fix.</p>
+
+<h3 id="DEXR">DEXR</h3>
+
+<p><a format="html" href="https://metacpan.org/release/Data-Edit-Xml-Reuse">Data::Edit::Xml::Reuse</a> is a library which is used to analyze <a format="html" href="https://en.wikipedia.org/wiki/XML">Xml</a> to find opportunities for reuse at the <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> tag level.</p>
+
+<h3 id="GBS">GBS</h3>
+
+<p><a format="html" href="http://metacpan.org/pod/Dita::GB::Standard">GB Standard</a> is a library, rated as ingenious by the <a format="html" href="https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force">Internet Engineering Task Force</a>, which enables conversions to <a format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</a> to be performed in a highly parallel manner on cheap Linux multi <a format="html" href="https://en.wikipedia.org/wiki/Central_processing_unit">Cpu</a> (96 or even more) computers using cost effective spot instances on <a format="html" href="http://aws.amazon.com">Amazon Web Services</a>.</p>
+
+<h3 id="PCD">PCD</h3>
+
+<p><a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::Pcd</a> is a module that applies transformations to a document corpus allowing personnel not skilled in writing <a format="html" href="http://www.perl.org/">Perl</a> to write a compact <a format="html" href="https://en.wikipedia.org/wiki/XML">Xml</a> transformation that can then be applied immediately at scale to a document corpus held in <a format="html" href="https://aws.amazon.com/s3/">S3</a>.</p>
+
+<h3 id="GHC">GHC</h3>
+
+<p><a format="html" href="https://metacpan.org/release/GitHub-Crud">Github Automation</a> is a library of methods which are used for manipulating the contents of <a format="html" href="https://github.com">GitHub</a> repositories.</p>
+
+<h1 id="Deploying-the-building-blocks">Deploying the building blocks</h1>
+
+<p>At the moment I am the only person who is using these building blocks: they are usually deployed through instances of <b>Data::Edit::Xml::To::Dita</b>, an unpublished framework, which combines customer specific data taken from the <a format="html" href="https://philiprbrenan.github.io/c_MigrationAssessmentSalesforce2.html">In-Take Form</a> with methods from the libraries described above to produce specific conversions customized to the individual needs of each customer.</p>
+
+<p>We now know through extensive practical application that these building blocks work well in our industry - giving us an opportunity to deploy these capabilities more widely with the intent of replacing dollars for hours with automation instead.</p>
+
+<h2 id="Deployment-on-Linux">Deployment on Linux</h2>
+
+<p>My initial idea for deploying this system more widely was by making it available as an <a format="html" href="https://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Environment</a> hosted by <a format="html" href="https://www.geany.org">Geany</a> running on <a format="html" href="https://en.wikipedia.org/wiki/Linux">Linux</a>. This in many ways is the ideal solution as it combines the speed and stability of <a format="html" href="https://www.geany.org">Geany</a> with the modular plug and play nature of <a format="html" href="https://en.wikipedia.org/wiki/Linux">Linux</a> to obtain maximal productivity from each user. This solution allows each user to rapidly develop and test <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::Pcd</a> requests locally on their own computer before loading them onto an <a format="html" href="http://aws.amazon.com">Amazon Web Services</a> instance via gigabit fiber for massively parallel execution against the full document corpus.</p>
+
+<p>This solution does require users to learn how to use <a format="html" href="https://en.wikipedia.org/wiki/Linux">Linux</a>.</p>
+
+<h2 id="Online-Content-Ryffiner">Online Content Ryffiner</h2>
+
+<p>For users who do not wish to use <a format="html" href="https://en.wikipedia.org/wiki/Linux">Linux</a> I have produced an online version - the <i>Online Content Ryffiner</i>:</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/testPcd.png"/></p>
+
+<p>The <i>Online Content Ryffiner</i> is securely packaged as an <a format="html" href="https://en.wikipedia.org/wiki/Amazon_Machine_Image">Amazon Web Services - Amazon Machine Image</a> that the user starts on an <a format="html" href="http://aws.amazon.com">Amazon Web Services</a> instance of appropriate size when-ever they wish to refine some content. The user writes a test <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::Pcd</a> in the upper left editor. Test <a format="html" href="https://en.wikipedia.org/wiki/XML">Xml</a> is placed in the upper right editor. The user pushes the <b>Convert</b> button to perform a trial conversion. The results of the trial conversion can then be seen in the lower editor. In this case the misplaced <b>q</b> has been renamed to <b>p</b>.</p>
+
+<p>Extensive documentation describing how to use the editors is available by clicking the <b>Help</b> link on the <b>Convert</b> page to see:</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/help.png"/></p>
+
+<h3 id="Convert">Convert</h3>
+
+<p>After a sufficient number of <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::Pcd</a>s have been developed in isolation the user can run them en-masse against a document corpus held in <a format="html" href="https://aws.amazon.com/s3/">S3</a>.</p>
+
+<p>For example: <b>150</b> such <a format="html" href="https://metacpan.org/pod/Dita::PCD">Dita::Pcd</a>s were developed to bring the <b>SF</b> corpus up to <b>100%</b> lint.</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/convert.png"/></p>
+
+<h3 id="Log">Log</h3>
+
+<p>The progress of the conversion can be tracked on the <b>Log</b> page:</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/log.png"/></p>
+
+<h3 id="Status">Status</h3>
+
+<p>After the conversion has completed the user can see the state of play on the <b>Status</b> page:</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/status.png"/></p>
+
+<h3 id="Reports">Reports</h3>
+
+<p>Each conversion produces reports describing various aspects of the corpus of interest to <i>content strategists</i>:</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/reports.png"/></p>
+
+<h3 id="Report-ids-not-used">Report ids not used</h3>
+
+<p>For example: this report shows the ids that have been defined but which are never used.</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/reportIdsNotUsed.png"/></p>
+
+<h3 id="Report-required-clean-ups">Report required clean ups</h3>
+
+<p>For example: this report shows the required cleans ups for the document corpus.</p>
+
+<p><img src="https://philiprbrenan.github.io/images/contentRyffiner/reportRequiredCleanUps.png"/></p>
+
+<h1 id="Recommendation">Recommendation</h1>
+
+<p>The <i>Online Content Ryffiner</i> gives us an opportunity to deliver a working product rather than hours worked to a customer. If we want to make this happen then the <i>Online Content Ryffiner</i> will have to be used frequently by <b>MfM</b>, <b>WdG</b>, <b>AL</b> et al. to do real conversion work so that we can all become acquainted with this technology and thereby:</p>
+
+<pre><code>  suggest and make improvements,
+
+  explain this technology to potential customers,
+
+  support customers in the field.</code></pre>
+
+<p>To that end, I recommend that <b>MfM</b> be tasked with presenting the <i>Online Content Ryffiner</i> to <b>SF</b> and likewise <b>AL</b> to <b>GE</b> to validate this early stage technology with real customers.</p>
+
+
+</body>
+
+</html>
+
+
